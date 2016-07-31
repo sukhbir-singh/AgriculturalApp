@@ -17,8 +17,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/bazar_rates" />
-        <include layout="@layout/bazar_rates" />
+        <include
+            android:id="@+id/bazar_rates_link"
+            layout="@layout/bazar_rates" />
+        <include
+            android:id="@+id/policies_link"
+            layout="@layout/government_policies"/>
+
 
     </LinearLayout>
 
