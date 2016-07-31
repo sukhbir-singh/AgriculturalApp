@@ -12,8 +12,15 @@
     tools:context="akssmk.com.agriculturalapp.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Content goes here..." />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/bazar_rates" />
+        <include layout="@layout/bazar_rates" />
+
+    </LinearLayout>
+
+
 </RelativeLayout>
