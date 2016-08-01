@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.bazar_rates_link).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Select_Policy.class));
+                startActivity(new Intent(MainActivity.this,Select_State.class));
             }
         });
 
