@@ -28,8 +28,10 @@
             android:label="@string/app_name">
         </activity>
         <activity
+
+            android:theme="@style/AppTheme"
             android:name=".CropProductionActivity"
-            android:label="@string/app_name">
+            android:label="Tap in the title">
         </activity>
         <activity android:name=".Select_State">
         </activity>
