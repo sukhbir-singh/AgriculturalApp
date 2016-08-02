@@ -1,13 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AgriculturalApp</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Call Kisan Help Centre</string>
+    <string name="action_settings">भारतीय किसान</string>
     <string name="title_activity_bazar__rate__select">Bazar_Rate_Select</string>
-
-    <string name="crop_production_card_title_en">Crop Production Method</string>
-    <string name="crop_production_card_title_hi">खेती की उन्‍नत विधि</string>
-
 </resources>

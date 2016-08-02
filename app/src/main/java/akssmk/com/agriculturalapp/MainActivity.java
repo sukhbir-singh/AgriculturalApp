@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        findViewById(R.id.bazar_rates_link).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.crop_production_link).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Select_State.class));
+                startActivity(new Intent(MainActivity.this,CropProductionActivity.class));
             }
         });
 
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.bazar_rates_nav) {
             Log.v("###","hello");
+            startActivity(new Intent(MainActivity.this, Select_State.class));
 
         }else if(id == R.id.weather_report_nav){
 

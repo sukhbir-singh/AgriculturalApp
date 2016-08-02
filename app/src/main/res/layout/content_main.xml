@@ -17,12 +17,21 @@
         android:layout_height="match_parent">
 
         <include
-            android:id="@+id/bazar_rates_link"
-            layout="@layout/bazar_rates" />
+            android:id="@+id/crop_production_link"
+            layout="@layout/crop_production_card" />
+        <include
+            android:id="@+id/treatment_link"
+            layout="@layout/treatment_card"/>
+        <include
+            android:id="@+id/storage_link"
+            layout="@layout/storage_card"/>
+        <include
+            android:id="@+id/horticulture_link"
+            layout="@layout/horticulture_card"/>
         <include
             android:id="@+id/policies_link"
             layout="@layout/government_policies"/>
 
     </LinearLayout>
-    
+
 </ScrollView>

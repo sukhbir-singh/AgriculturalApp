@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#d57fe4">
+        android:background="#8cea69">
         <ImageView
             android:layout_margin="10dp"
             android:layout_width="80dp"
@@ -34,6 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/title_item_category"
-            android:text="Bazar Rates"/>
+            android:text="Storage Methods"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>
