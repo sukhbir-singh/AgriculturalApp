@@ -85,15 +85,16 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="25dp"
-                            android:text="Introduction"
+                            android:text="1.परिचय (Intriduction)"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //h1 of wheat card
+
                     <RelativeLayout
                         android:padding="10dp"
                         android:background="#e9bb9b"
                         android:id="@+id/wh1_collapse"
-                        android:visibility="visible"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
@@ -104,37 +105,347 @@
                     </RelativeLayout>       //text of h1
 
                     <RelativeLayout
-                        android:padding="20dp"
-                        android:background="#f00"
+                        android:id="@+id/wheat_h2"
+                        android:padding="5dp"
+                        android:background="#f4904e"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:text="Heading 2"
+                            android:textSize="25dp"
+                            android:text="2.उपयुक्त जलवायु क्षेत्र"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //h2 of wheat card
-
                     <RelativeLayout
-                        android:padding="20dp"
-                        android:background="#f00"
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh2_collapse"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:text="Heading 3"
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h2
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h3"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="3.भूमि का चयन"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //h3 of wheat card
-
                     <RelativeLayout
-                        android:padding="20dp"
-                        android:background="#f00"
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh3_collapse"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:text="Heading 4"
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h3
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h4"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="4.खेत  की तैयारी"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //h4 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh4_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h4
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h5"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="5.गेहूँ की प्रमुख उन्नत किस्मे"
+
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h5 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh5_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h5
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h6"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="6.बीजोपचार"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h6 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh6_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h6
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h7"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="7.बोआई का समय"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h7 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh7_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h7
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h8"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="8.बीज दर एवं पौध अंतरण"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h8 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh8_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h8
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h9"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="9.बीज बोने की गहराई"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h9 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh9_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h9
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h10"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="10.बोआई की विधियाँ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h10 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh10_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h10
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h11"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="11.खाद एवं उर्वरक"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h11 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh11_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h11
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h12"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="12.सिंचाई"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h12 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh12_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h12
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h13"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="13.कटाई-गहाई"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h13 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh13_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h13
+
+                    <RelativeLayout
+                        android:id="@+id/wheat_h14"
+                        android:padding="5dp"
+                        android:background="#f4904e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="25dp"
+                            android:text="14.उपज एवं भंडारण"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //h14 of wheat card
+                    <RelativeLayout
+                        android:padding="10dp"
+                        android:background="#e9bb9b"
+                        android:id="@+id/wh14_collapse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="@string/wh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>       //text of h14
+
+
+
 
                 </LinearLayout>     //collaps of wheat
 
