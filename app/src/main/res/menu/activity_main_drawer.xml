@@ -3,18 +3,34 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Feature" />
+            android:id="@+id/bazar_rates_nav"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Bazar Rates" />
+        <item
+            android:id="@+id/weather_report_nav"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Weather Report" />
+        <item
+            android:id="@+id/state_agricultural_nav"
+            android:icon="@drawable/ic_menu_send"
+            android:title="State Agricultural Department" />
+        <item
+            android:id="@+id/about_nav"
+            android:icon="@drawable/ic_menu_send"
+            android:title="About App" />
     </group>
 
-    <item android:title="Feedback">
+    <item android:title="Help/Feedback">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-
+                android:id="@+id/contactus_nav"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/call_link"
+                android:orderInCategory="100"
+                android:title="@string/action_settings"
+                android:icon="@android:drawable/ic_menu_call" />
         </menu>
     </item>
 

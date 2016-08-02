@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 public class SplashActivity extends AppCompatActivity {
 
-    private int SPLASH_LENGTH=1200;
+    private int SPLASH_LENGTH=1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

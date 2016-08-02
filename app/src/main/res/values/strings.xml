@@ -4,6 +4,6 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Call Kisan Help Centre</string>
     <string name="title_activity_bazar__rate__select">Bazar_Rate_Select</string>
 </resources>
