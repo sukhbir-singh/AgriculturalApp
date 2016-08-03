@@ -72,7 +72,7 @@
 
                 <LinearLayout
                     android:id="@+id/wheat_collapse"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -507,55 +507,378 @@
 
                     <LinearLayout
                         android:id="@+id/paddy_collapse"
-                        android:visibility="gone"
+                        android:visibility="visible"
                         android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="wrap_content">
 
 
                         <RelativeLayout
-                            android:padding="20dp"
-                            android:background="#f00"
+                            android:id="@+id/paddy_h1"
+                            android:padding="5dp"
+                            android:background="#f4904e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:text="Heading 1"
+                                android:textSize="25dp"
+                                android:text="1.परिचय (Intriduction)"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
-                        </RelativeLayout>
+                        </RelativeLayout>       //h1 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph1_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h1
 
                         <RelativeLayout
-                            android:padding="20dp"
-                            android:background="#f00"
+                            android:id="@+id/paddy_h2"
+                            android:padding="5dp"
+                            android:background="#f4904e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:text="Heading 1"
+                                android:textSize="25dp"
+                                android:text="2.उपयुक्त जलवायु क्षेत्र"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
-                        </RelativeLayout>
+                        </RelativeLayout>       //h2 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph2_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h2
 
                         <RelativeLayout
-                            android:padding="20dp"
-                            android:background="#f00"
+                            android:id="@+id/paddy_h3"
+                            android:padding="5dp"
+                            android:background="#f4904e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:text="Heading 1"
+                                android:textSize="25dp"
+                                android:text="3.भूमि का चयन"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
-                        </RelativeLayout>
+                        </RelativeLayout>       //h3 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph3_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h3
 
                         <RelativeLayout
-                            android:padding="20dp"
-                            android:background="#f00"
+                            android:id="@+id/paddy_h4"
+                            android:padding="5dp"
+                            android:background="#f4904e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:text="Heading 1"
+                                android:textSize="25dp"
+                                android:text="4.खेत  की तैयारी"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
-                        </RelativeLayout>
+                        </RelativeLayout>       //h4 ofpaddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph4_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h4
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h5"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="5.गेहूँ की प्रमुख उन्नत किस्मे"
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h5 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph5_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h5
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h6"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="6.बीजोपचार"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h6 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph6_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h6
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h7"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="7.बोआई का समय"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h7 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph7_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h7
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h8"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="8.बीज दर एवं पौध अंतरण"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h8 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph8_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h8
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h9"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="9.बीज बोने की गहराई"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h9 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph9_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h9
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h10"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="10.बोआई की विधियाँ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h10 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph10_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h10
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h11"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="11.खाद एवं उर्वरक"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h11 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph11_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h11
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h12"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="12.सिंचाई"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h12 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph12_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h12
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h13"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="13.कटाई-गहाई"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h13 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph13_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h13
+
+                        <RelativeLayout
+                            android:id="@+id/paddy_h14"
+                            android:padding="5dp"
+                            android:background="#f4904e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="25dp"
+                                android:text="14.उपज एवं भंडारण"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //h14 of paddy card
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:background="#e9bb9b"
+                            android:id="@+id/ph14_collapse"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="20dp"
+                                android:text="@string/wh14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>       //text of h14
+
 
                     </LinearLayout>         //collaps of paddy
 
