@@ -89,7 +89,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //h1 of wheat card
-
                     <RelativeLayout
                         android:padding="10dp"
                         android:background="#e9bb9b"
@@ -125,7 +124,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h2
@@ -151,7 +150,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h3
@@ -177,7 +176,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h4
@@ -205,7 +204,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h5
@@ -231,7 +230,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h6
@@ -257,7 +256,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h7
@@ -283,7 +282,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h8
@@ -309,7 +308,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h9
@@ -335,7 +334,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h10
@@ -361,7 +360,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h11
@@ -387,7 +386,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h12
@@ -413,7 +412,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h13
@@ -439,7 +438,7 @@
                         android:layout_height="wrap_content">
                         <TextView
                             android:textSize="20dp"
-                            android:text="@string/wh1"
+                            android:text="@string/wh14"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>       //text of h14
