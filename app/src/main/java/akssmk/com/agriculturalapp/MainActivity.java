@@ -1,6 +1,7 @@
 package akssmk.com.agriculturalapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -75,6 +77,14 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.contactus_nav){
 
         }else if(id == R.id.call_link){
+            Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91"+"9816469656"));
+            try{
+                startActivity(in);
+            }
+
+            catch (android.content.ActivityNotFoundException ex){
+                Toast.makeText(getApplicationContext(),"yourActivity is not founded",Toast.LENGTH_SHORT).show();
+            }
 
         }
 
