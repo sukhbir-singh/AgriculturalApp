@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">AgriculturalApp</string>
 
+    <string name="about">About Application</string>
+    <string name="about_text">This app is made for the event Hackathon conducted by Digital India and sponsered by HackerEarth</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

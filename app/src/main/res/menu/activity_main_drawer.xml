@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group>
         <item
             android:id="@+id/bazar_rates_nav"
             android:icon="@drawable/ic_menu_send"
             android:title="Bazar Rates" />
-        <item
-            android:id="@+id/weather_report_nav"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Weather Report" />
         <item
             android:id="@+id/state_agricultural_nav"
             android:icon="@drawable/ic_menu_send"

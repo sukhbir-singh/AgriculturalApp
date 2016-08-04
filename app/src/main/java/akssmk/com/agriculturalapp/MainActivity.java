@@ -1,17 +1,24 @@
 package akssmk.com.agriculturalapp;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -59,6 +66,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    @TargetApi(Build.VERSION_CODES.M)
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -68,23 +76,60 @@ public class MainActivity extends AppCompatActivity
             Log.v("###","hello");
             startActivity(new Intent(MainActivity.this, Select_State.class));
 
-        }else if(id == R.id.weather_report_nav){
-
         }else if(id == R.id.state_agricultural_nav){
 
         }else if(id == R.id.about_nav){
 
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(String.format("%1$s", getString(R.string.about)));
+            builder.setMessage(getResources().getText(R.string.about_text));
+            builder.setPositiveButton("OK", null);
+            //builder.setIcon(R.mipmap.nimbus16);
+            AlertDialog welcomeAlert = builder.create();
+            welcomeAlert.show();
+            ((TextView) welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
+
         }else if(id == R.id.contactus_nav){
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            String uriText = "mailto:" + Uri.encode("sukhbir947@gmail.com") + "?subject=" +
+                    Uri.encode("Feedback") + "&body=" + Uri.encode("");
+
+            Uri uri = Uri.parse(uriText);
+            intent.setData(uri);
+            startActivity(Intent.createChooser(intent, "Send Email"));
+
 
         }else if(id == R.id.call_link){
-            Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91"+"9816469656"));
-            try{
-                startActivity(in);
+            if(Build.VERSION.SDK_INT<23){
+                Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91" + "9816469656"));
+
+                try{
+                    startActivity(in);
+                }catch (android.content.ActivityNotFoundException ex){
+                    Toast.makeText(getApplicationContext(), "yourActivity is not founded", Toast.LENGTH_SHORT).show();
+                }
+
+            }else{
+                int REQUEST_CODE_ASK_PERMISSIONS = 123;
+
+                int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.CALL_PHONE);
+                if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissions(new String[] {Manifest.permission.CALL_PHONE},
+                            REQUEST_CODE_ASK_PERMISSIONS);
+
+                }
+
+                Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91" + "9816469656"));
+
+                try{
+                    startActivity(in);
+                }catch (android.content.ActivityNotFoundException ex){
+                    Toast.makeText(getApplicationContext(), "yourActivity is not founded", Toast.LENGTH_SHORT).show();
+                }
+
             }
 
-            catch (android.content.ActivityNotFoundException ex){
-                Toast.makeText(getApplicationContext(),"yourActivity is not founded",Toast.LENGTH_SHORT).show();
-            }
+            return true;
 
         }
 
