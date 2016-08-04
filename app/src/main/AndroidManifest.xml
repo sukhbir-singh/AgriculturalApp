@@ -28,15 +28,26 @@
         </activity>
         <activity
             android:name=".Select_Policy"
+            android:theme="@style/AppTheme"
             android:label="@string/app_name">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
-
             android:theme="@style/AppTheme"
             android:name=".CropProductionActivity"
             android:label="Tap in the title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Select_State">
+        <activity android:name=".Select_State"
+            android:theme="@style/AppTheme"
+            android:label="Select State">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
     </application>
 

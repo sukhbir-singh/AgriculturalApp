@@ -9,10 +9,14 @@ public class Select_State extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.uttar_pradesh);
+        setContentView(R.layout.states);
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Select State");
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Select State");
+        }
+
     }
 }

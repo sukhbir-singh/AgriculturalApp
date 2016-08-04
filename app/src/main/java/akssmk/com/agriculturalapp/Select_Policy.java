@@ -12,8 +12,11 @@ public class Select_Policy extends AppCompatActivity {
         setContentView(R.layout.fasal_bima_yojana);
 
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Select Policy");
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Select Policy");
+        }
     }
 }

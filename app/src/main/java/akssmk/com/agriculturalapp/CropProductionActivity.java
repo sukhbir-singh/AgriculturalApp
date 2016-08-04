@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -39,6 +38,13 @@ public class CropProductionActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_crop_production);
+
+        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Select a Crop");
+        }
 
         wheat_collapse=(LinearLayout)findViewById(R.id.wheat_collapse);
         paddy_collapse=(LinearLayout)findViewById(R.id.paddy_collapse);
