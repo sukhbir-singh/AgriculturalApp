@@ -13,15 +13,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:background="#d57fe4">
         <ImageView
-            android:layout_margin="10dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
             android:id="@+id/image_item_category"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@raw/cm"/>
 
         <LinearLayout
             android:layout_gravity="center"
