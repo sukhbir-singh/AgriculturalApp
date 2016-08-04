@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Log.v("version",Build.VERSION.SDK_INT+"");
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.bazar_rates_nav) {
             Log.v("###","hello");
-            startActivity(new Intent(MainActivity.this, Select_State.class));
+            startActivity(new Intent(MainActivity.this, Select_State_Bazaar.class));
 
         }else if(id == R.id.state_agricultural_nav){
 
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity
             builder.setTitle(String.format("%1$s", getString(R.string.about)));
             builder.setMessage(getResources().getText(R.string.about_text));
             builder.setPositiveButton("OK", null);
-            //builder.setIcon(R.mipmap.nimbus16);
+            builder.setIcon(R.drawable.icon);
             AlertDialog welcomeAlert = builder.create();
             welcomeAlert.show();
             ((TextView) welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());

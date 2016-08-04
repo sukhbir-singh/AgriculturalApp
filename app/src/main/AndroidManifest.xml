@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="akssmk.com.agriculturalapp">
+    package="akssmk.com.agriculturalapp">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -14,41 +14,45 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashStyle">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Select_Policy"
-            android:theme="@style/AppTheme"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:theme="@style/AppTheme"
             android:name=".CropProductionActivity"
-            android:label="Tap in the title">
+            android:label="Tap in the title"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Select_State"
-            android:theme="@style/AppTheme"
-            android:label="Select State">
+        <activity
+            android:name=".Select_State_Bazaar"
+            android:label="Select State"
+            android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".ShowRates"
+            android:label="@string/title_activity_show_rates"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
