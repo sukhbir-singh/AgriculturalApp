@@ -29,5 +29,6 @@ dependencies {
     compile 'net.steamcrafted:load-toast:1.0.10'
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile files('../libs/jsoup-1.8.3.jar')
+    compile files('../libs/unbescape-1.1.2.jar')
     testCompile 'junit:junit:4.12'
 }
