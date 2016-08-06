@@ -13,11 +13,11 @@ import org.unbescape.html.HtmlEscape;
 
 import java.util.ArrayList;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.viewHolder> {
+public class RatesAdapter extends RecyclerView.Adapter<RatesAdapter.viewHolder> {
     private ArrayList<NewsItem> list=new ArrayList<>();
     private Context context;
 
-    public CategoryAdapter(Context context) {
+    public RatesAdapter(Context context) {
         this.context = context;
     }
 
