@@ -59,7 +59,11 @@
         <activity
             android:name=".SurveyActivity"
             android:label="@string/title_activity_survey"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".SurveyInformation"
             android:label="@string/title_activity_survey"

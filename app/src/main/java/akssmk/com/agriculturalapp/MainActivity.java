@@ -32,17 +32,17 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private MainAdapter adapter;
 
-    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.raw.hor,R.raw.policy};
+    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.raw.cm,R.raw.hor,R.raw.policy};
 
     private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi,
             R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi,
-            R.string.crop_production_card_title_hi};
+            R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi};
 
     private Integer[] englishTexts={R.string.crop_production_card_title_en,R.string.crop_production_card_title_en,
             R.string.crop_production_card_title_en,R.string.crop_production_card_title_en,
-            R.string.crop_production_card_title_en};
+            R.string.crop_production_card_title_en,R.string.crop_production_card_title_en};
 
-    private String[] backgroundColors={"#d57fe4","#f4a04c","#ca684d","#ca684d","#ca684d"};
+    private String[] backgroundColors={"#d57fe4","#f4a04c","#ca684d","#ca684d","#ca684d","#ca684d"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity
                 new Intent(MainActivity.this, CropProductionActivity.class),
                 new Intent(MainActivity.this, Select_Policy.class),
                 new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, SurveyActivity.class),
                 new Intent(MainActivity.this, Select_Policy.class),
                 new Intent(MainActivity.this, Select_Policy.class)
         };
