@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
     @TargetApi(Build.VERSION_CODES.M)
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

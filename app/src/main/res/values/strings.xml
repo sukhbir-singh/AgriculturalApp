@@ -1,4 +1,13 @@
 <resources>
+    <string-array name="policies">
+        <item name="policy1">Policy 1</item>
+        <item name="policy2">Policy 2</item>
+        <item name="policy3">Policy 3</item>
+        <item name="policy4">Policy 4</item>
+        <item name="policy5">Policy 5</item>
+    </string-array>
+
+
     <string name="app_name">AgriculturalApp</string>
 
     <string name="about">About Application</string>
