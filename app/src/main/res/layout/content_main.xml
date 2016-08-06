@@ -23,6 +23,9 @@
             android:id="@+id/storage_link"
             layout="@layout/storage_card"/>
         <include
+            android:id="@+id/survey_link"
+            layout="@layout/survey_card"/>
+        <include
             android:id="@+id/horticulture_link"
             layout="@layout/horticulture_card"/>
         <include

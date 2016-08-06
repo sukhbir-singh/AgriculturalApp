@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.crop_production_link).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,CropProductionActivity.class));
+                startActivity(new Intent(MainActivity.this, CropProductionActivity.class));
             }
         });
 
@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,Select_Policy.class));
+            }
+        });
+        findViewById(R.id.survey_link).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SurveyActivity.class));
             }
         });
     }

@@ -163,5 +163,6 @@
 
     </string>
     <string name="title_activity_show_rates">ShowRates</string>
+    <string name="title_activity_survey">SurveyActivity</string>
 
 </resources>
