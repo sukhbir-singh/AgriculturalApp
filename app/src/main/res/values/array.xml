@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="States">
+        <item>RAJASTHAN</item>
+        <item>UTTAR PRADESH</item>
+        <item>JHARKHAND</item>
+        <item>TRIPURA</item>
+        <item>SIKKIM</item>
+        <item>PUNJAB</item>
+        <item>MIZORAM</item>
+        <item>PONDICHERRY</item>
+    </string-array>
+</resources>
