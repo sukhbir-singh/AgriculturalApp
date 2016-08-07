@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity
                 new Intent(MainActivity.this, Select_Policy.class),
                 new Intent(MainActivity.this, Select_Policy.class),
                 new Intent(MainActivity.this, SurveyActivity.class),
-                new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, HorticultureActivity.class),
                 new Intent(MainActivity.this, Select_Policy.class)
         };
 
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         adapter = new MainAdapter(this,list);
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
