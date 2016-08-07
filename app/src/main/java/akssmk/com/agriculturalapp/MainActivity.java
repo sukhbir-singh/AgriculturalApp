@@ -13,6 +13,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
@@ -21,8 +23,26 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private ArrayList<MainListItem> list;
+    private RecyclerView recyclerView;
+    private MainAdapter adapter;
+
+    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.raw.cm,R.raw.hor,R.raw.policy};
+
+    private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi,
+            R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi,
+            R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi};
+
+    private Integer[] englishTexts={R.string.crop_production_card_title_en,R.string.crop_production_card_title_en,
+            R.string.crop_production_card_title_en,R.string.crop_production_card_title_en,
+            R.string.crop_production_card_title_en,R.string.crop_production_card_title_en};
+
+    private String[] backgroundColors={"#d57fe4","#f4a04c","#ca684d","#ca684d","#ca684d","#ca684d"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +51,34 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Log.v("version",Build.VERSION.SDK_INT+"");
+        Intent[] links={
+                new Intent(MainActivity.this, CropProductionActivity.class),
+                new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, SurveyActivity.class),
+                new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, Select_Policy.class)
+        };
+
+        list = new ArrayList<>();
+        for(int i=0;i<imageUrls.length;i++){
+            MainListItem item=new MainListItem();
+
+            item.setImageUrl(imageUrls[i]);
+            item.setHindiText(hindiTexts[i]);
+            item.setEnglishText(englishTexts[i]);
+            item.setBackgroundColor(backgroundColors[i]);
+            item.setIntent(links[i]);
+
+            list.add(item);
+        }
+
+        adapter = new MainAdapter(this,list);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+
+        Log.v("version", Build.VERSION.SDK_INT + "");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,19 +89,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        findViewById(R.id.crop_production_link).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,CropProductionActivity.class));
-            }
-        });
-
-        findViewById(R.id.policies_link).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,Select_Policy.class));
-            }
-        });
+        findViewById(R.id.progress).setVisibility(View.GONE);
     }
 
     @Override
