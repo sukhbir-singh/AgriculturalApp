@@ -22,6 +22,16 @@
     <string name="crop_production_card_title_en">Crop Production Method</string>
     <string name="crop_production_card_title_hi">खेती की उन्‍नत विधि</string>
 
+    <string name="horticulture_item1_en">apple Production Method</string>
+    <string name="horticulture_item1_hi">खेती की उन्‍नत विधि</string>
+
+    <string name="horticulture_item2_en">Papaya Production Method</string>
+    <string name="horticulture_item2_hi">खेती की उन्‍नत विधि</string>
+
+    <string name="horticulture_item3_en">guava Production Method</string>
+    <string name="horticulture_item3_hi">खेती की उन्‍नत विधि</string>
+
+
     <string name="wh1">
         गेहूँ की खेती विश्व के प्रायः हर भाग में होती है ।
         संसार की कुल 23 प्रतिशत भूमि पर गेहूँ की ख्¨ती की जाती है ।
@@ -172,7 +182,8 @@
 
     </string>
     <string name="title_activity_show_rates">ShowRates</string>
-    <string name="title_activity_survey">SurveyActivity</string>
-    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_activity_survey">Survey</string>
+    <string name="title_activity_horticulture">Horticulture</string>
 
 </resources>

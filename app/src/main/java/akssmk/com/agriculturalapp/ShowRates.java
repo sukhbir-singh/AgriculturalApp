@@ -31,7 +31,7 @@ public class ShowRates extends AppCompatActivity{
     private static final String TITLE_READ_MORE = "more_title";
     private static final String PUB_DATE ="pub" ;
     private RecyclerView recyclerView;
-    private CategoryAdapter adapter;
+    private RatesAdapter adapter;
     private ArrayList<NewsItem> list;
     private Toolbar toolbar;
     private static final String CATEGORY_NAME = "Category";
@@ -54,7 +54,7 @@ public class ShowRates extends AppCompatActivity{
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         
         list = new ArrayList<>();
-        adapter = new CategoryAdapter(this);
+        adapter = new RatesAdapter(this);
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
