@@ -59,7 +59,7 @@
         <activity
             android:name=".SurveyActivity"
             android:label="@string/title_activity_survey"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
@@ -78,7 +78,15 @@
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Select_State_Bazaar"/>
+                android:value=".SurveyActivity" />
+        </activity>
+        <activity
+            android:name=".GraphActivity"
+            android:label="@string/title_activity_survey"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SurveyInformation" />
         </activity>
     </application>
 

@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -41,6 +44,9 @@ public class SurveyActivity extends AppCompatActivity{
     private static final String URL_CROP = "http://kharita.freevar.com/crop.php";
     ArrayAdapter<String> arrayAdapter,arrayAdapter1,arrayAdapter2;
     ArrayList<String> list11,list2;
+    ProgressBar p;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +57,10 @@ public class SurveyActivity extends AppCompatActivity{
         spinner2= (Spinner) findViewById(R.id.spinner2);
         spinner3= (Spinner) findViewById(R.id.spinner3);
         btnSubmit= (Button) findViewById(R.id.btnSubmit);
+        p = (ProgressBar) findViewById(R.id.progress);
         list11=new ArrayList<>();
          list2=new ArrayList<>();
+        p.setVisibility(View.VISIBLE);
 
          arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.States));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -136,6 +144,7 @@ public class SurveyActivity extends AppCompatActivity{
                   arrayAdapter2.notifyDataSetChanged();
               }
              Log.d("data",response);
+              p.setVisibility(View.GONE);
           }
       }, new Response.ErrorListener() {
           @Override
@@ -168,5 +177,19 @@ public class SurveyActivity extends AppCompatActivity{
             e.printStackTrace();
         }
         return list;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (NavUtils.getParentActivityName(this) != null) {
+
+                    finish();
+
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

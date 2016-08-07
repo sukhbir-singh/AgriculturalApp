@@ -1,11 +1,18 @@
 package akssmk.com.agriculturalapp;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -29,6 +36,8 @@ public class SurveyInformation extends AppCompatActivity {
     SurveyAdapter adapter;
     String state,district,crop;
     TextView state_view,district_view,crop_view;
+    FloatingActionButton btn;
+    ProgressBar p;
     private ArrayList<ItemSurvey> items;
 
     private String URL_FINAL = "http://kharita.freevar.com/agriculture.php";
@@ -41,6 +50,24 @@ public class SurveyInformation extends AppCompatActivity {
         state_view=(TextView)findViewById(R.id.state);
         district_view=(TextView)findViewById(R.id.district);
         crop_view=(TextView)findViewById(R.id.crop);
+        p = (ProgressBar) findViewById(R.id.progress);
+        p.setVisibility(View.VISIBLE);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.graph);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(items.size()!=0)
+                {
+                    Intent i = new Intent(SurveyInformation.this,GraphActivity.class);
+                    Bundle extra=new Bundle();
+                    extra.putSerializable("All",items);
+                    i.putExtra("extra",extra);
+                    startActivity(i);
+                }
+
+            }
+        });
 
         recyclerView=(RecyclerView)findViewById(R.id.crop_recycler);
         if(i!=null){
@@ -53,6 +80,7 @@ public class SurveyInformation extends AppCompatActivity {
             crop_view.setText(crop);
             sendRequest(URL_FINAL,state,district,crop);
         }
+
     }
 
     private void sendRequest(String url, final String State, final String District, final String Crop)
@@ -79,6 +107,7 @@ public class SurveyInformation extends AppCompatActivity {
                     adapter=new SurveyAdapter(SurveyInformation.this,items);
                     recyclerView.setLayoutManager(new LinearLayoutManager(SurveyInformation.this));
                     recyclerView.setAdapter(adapter);
+                    p.setVisibility(View.GONE);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -103,5 +132,19 @@ public class SurveyInformation extends AppCompatActivity {
         MySingleton.getInstance(MyApplication.getAppContext()).addToRequestQueue(s);
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (NavUtils.getParentActivityName(this) != null) {
+
+                    finish();
+
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
