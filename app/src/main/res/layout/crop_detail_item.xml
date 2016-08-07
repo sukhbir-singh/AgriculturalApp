@@ -14,46 +14,50 @@
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#d57fe4">
-        <ImageView
-            android:layout_margin="10dp"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:id="@+id/image_item_parent"
-            android:scaleType="centerCrop"
-            android:src="@raw/wheat"/>
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d57fe4">
             <TextView
-                android:id="@+id/text_main_parent"
+                android:id="@+id/heading"
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_gravity="center"
                 android:padding="5dp"
                 android:layout_weight="1"
                 android:textColor="#505050"
-                android:textSize="18sp"
+                android:textSize="25sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="heading 1"/>
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView"
+                android:scaleType="centerCrop"
+                android:src="@raw/dro"
                 />
-            <TextView
-                android:id="@+id/text_sub_parent"
-                android:layout_marginLeft="7dp"
-                android:layout_marginRight="7dp"
-                android:layout_gravity="center"
-                android:padding="5dp"
-                android:layout_weight="1"
-                android:textColor="#505050"
-                android:textSize="18sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-               />
         </LinearLayout>
+        <TextView
+            android:id="@+id/detail"
+            android:visibility="gone"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:textColor="#505050"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="english text"/>
+
 
     </LinearLayout>
 </android.support.v7.widget.CardView>

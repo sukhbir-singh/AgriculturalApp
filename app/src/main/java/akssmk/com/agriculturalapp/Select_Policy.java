@@ -18,7 +18,7 @@ public class Select_Policy extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_category);
+        setContentView(R.layout.content_recycler);
 
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);

@@ -19,8 +19,24 @@
     <string name="action_settings">Call Kisan Help Centre</string>
     <string name="title_activity_bazar__rate__select">Bazar_Rate_Select</string>
 
-    <string name="crop_production_card_title_en">Crop Production Method</string>
-    <string name="crop_production_card_title_hi">खेती की उन्‍नत विधि</string>
+    <string name="crop_production_card_title_en">Crop Production Methods</string>
+    <string name="crop_production_card_title_hi">खेती की उन्‍नत विधियां</string>
+
+    <string name="treatment_card_title_en">Crop Treatment Method</string>
+    <string name="treatment_card_title_hi">प्रमुख समस्याएं एवं निवारण</string>
+
+    <string name="storage_card_title_en">Storage Methods</string>
+    <string name="storage_card_title_hi">भण्डारण की विधियां</string>
+
+    <string name="survey_card_title_en"> Production Detais</string>
+    <string name="survey_card_title_hi">उत्पादन का विवरण </string>
+
+    <string name="horticulture_card_title_en">Horticulture Methods</string>
+    <string name="horticulture_card_title_hi">बागवानी की उन्‍नत विधियां</string>
+
+    <string name="policy_card_title_en">Government Schemes</string>
+    <string name="policy_card_title_hi"> सरकार की योजनाएं  </string>
+
 
     <string name="horticulture_item1_en">apple Production Method</string>
     <string name="horticulture_item1_hi">खेती की उन्‍नत विधि</string>
@@ -31,6 +47,24 @@
     <string name="horticulture_item3_en">guava Production Method</string>
     <string name="horticulture_item3_hi">खेती की उन्‍नत विधि</string>
 
+    <string name="wheat_h1">1.परिचय (Intriduction)</string>
+    <string name="wheat_h2">2.उपयुक्त जलवायु क्षेत्र</string>
+    <string name="wheat_h3">3.भूमि का चयन</string>
+    <string name="wheat_h4">4.खेत  की तैयारी</string>
+    <string name="wheat_h5">5.गेहूँ की प्रमुख उन्नत किस्मे</string>
+    <string name="wheat_h6">6.बीजोपचार</string>
+    <string name="wheat_h7">7.बोआई का समय</string>
+    <string name="wheat_h8">8.बीज दर एवं पौध अंतरण</string>
+    <string name="wheat_h9">9.बीज बोने की गहराई</string>
+    <string name="wheat_h10">10.बोआई की विधियाँ</string>
+    <string name="wheat_h11">11.खाद एवं उर्वरक</string>
+    <string name="wheat_h12">12.सिंचाई</string>
+    <string name="wheat_h13">13.कटाई-गहाई</string>
+    <string name="wheat_h14">14.उपज एवं भंडारण</string>
+
+    <string name="crop1">Crop1</string>
+    <string name="crop2">Crop2</string>
+    <string name="crop3">Crop3</string>
 
     <string name="wh1">
         गेहूँ की खेती विश्व के प्रायः हर भाग में होती है ।
