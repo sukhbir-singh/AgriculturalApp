@@ -18,44 +18,59 @@
        <LinearLayout
            android:padding="5dp"
            android:layout_width="match_parent"
+           android:weightSum="2"
            android:layout_height="wrap_content">
            <TextView
                android:layout_width="wrap_content"
                android:textSize="20sp"
+               android:gravity="center"
+               android:layout_weight="1"
                android:layout_height="wrap_content"
                android:text="Year"/>
            <TextView
                android:textSize="20sp"
                android:layout_width="wrap_content"
+               android:layout_weight="1"
+               android:gravity="center"
                android:layout_height="wrap_content"
                android:id="@+id/year"/>
        </LinearLayout>
         <LinearLayout
             android:padding="5dp"
             android:layout_width="match_parent"
+            android:weightSum="2"
             android:layout_height="wrap_content">
             <TextView
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="Area"/>
             <TextView
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:layout_height="wrap_content"
                 android:id="@+id/area"/>
         </LinearLayout>
         <LinearLayout
             android:padding="5dp"
             android:layout_width="match_parent"
+            android:weightSum="2"
             android:layout_height="wrap_content">
             <TextView
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="Production"/>
             <TextView
                 android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/production"/>

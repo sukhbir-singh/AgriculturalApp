@@ -30,6 +30,7 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.bignerdranch.android:expandablerecyclerview:2.1.1'
     compile 'com.ms-square:expandableTextView:0.1.4'
+    compile 'com.jjoe64:graphview:4.1.1'
 
     compile files('../libs/jsoup-1.8.3.jar')
     compile files('../libs/unbescape-1.1.2.jar')
