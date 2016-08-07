@@ -18,12 +18,19 @@ import java.util.ArrayList;
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.viewHolder> {
 private ArrayList<MainListItem> list=new ArrayList<>();
 private Context context;
+private int layout=R.layout.item_main;
 
 public MainAdapter(Context context,ArrayList<MainListItem> items) {
         this.context = context;
         this.list=items;
 }
 
+
+    public MainAdapter(Context context,ArrayList<MainListItem> items,int layout) {
+        this.context = context;
+        this.list=items;
+        this.layout=layout;
+    }
 /*public  void  refresh(ArrayList<NewsItem> list){
         this.list=list;
         notifyItemRangeChanged(0,list.size());
@@ -31,7 +38,7 @@ public MainAdapter(Context context,ArrayList<MainListItem> items) {
 
 @Override
 public viewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_main,parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(layout,parent, false);
         return new viewHolder(view);
         }
 
@@ -45,6 +52,7 @@ public void onBindViewHolder(viewHolder holder, final int position) {
         holder.linear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(list.get(position).getIntent()!=null)
                 context.startActivity(list.get(position).getIntent());
             }
         });
