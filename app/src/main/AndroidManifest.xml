@@ -59,14 +59,26 @@
         <activity
             android:name=".SurveyActivity"
             android:label="@string/title_activity_survey"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SurveyInformation"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">
             <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".Select_State_Bazaar" />
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Select_State_Bazaar" />
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".GraphActivity"
+            android:label="@string/title_activity_survey"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SurveyInformation" />
         </activity>
     </application>
 
