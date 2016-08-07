@@ -41,7 +41,7 @@ public class ShowRates extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_category);
+        setContentView(R.layout.content_recycler);
 
         Intent intent = getIntent();
         if (intent != null) {

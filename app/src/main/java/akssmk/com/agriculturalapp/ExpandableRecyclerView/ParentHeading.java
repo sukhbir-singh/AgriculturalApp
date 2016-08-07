@@ -8,10 +8,10 @@ import java.util.List;
  * Created by Ramola on 8/5/2016.
  */
 public class ParentHeading implements ParentListItem{
-    private String Heading;
+    private int Heading;
     private List<ChildHeading> childList;
 
-    public ParentHeading(String heading, List<ChildHeading> childList) {
+    public ParentHeading(int heading, List<ChildHeading> childList) {
         Heading = heading;
         this.childList = childList;
     }
@@ -26,7 +26,7 @@ public class ParentHeading implements ParentListItem{
         return false;
     }
 
-    public String getHeading() {
+    public int getHeading() {
         return Heading;
     }
 }

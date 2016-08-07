@@ -80,6 +80,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Select_State_Bazaar"/>
         </activity>
+        <activity android:name=".CropDetailActivity"
+            android:label="@string/title_activity_survey"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CropProductionActivity"/>
+        </activity>
     </application>
 
 </manifest>

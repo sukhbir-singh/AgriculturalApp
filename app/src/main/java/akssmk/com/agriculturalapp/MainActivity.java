@@ -33,17 +33,17 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private MainAdapter adapter;
 
-    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.raw.cm,R.raw.hor,R.raw.policy};
+    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.raw.graph,R.raw.hrt,R.raw.scheme};
 
-    private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi,
-            R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi,
-            R.string.crop_production_card_title_hi,R.string.crop_production_card_title_hi};
+    private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.treatment_card_title_hi,
+            R.string.storage_card_title_hi,R.string.survey_card_title_hi,
+            R.string.horticulture_card_title_hi,R.string.policy_card_title_hi};
 
-    private Integer[] englishTexts={R.string.crop_production_card_title_en,R.string.crop_production_card_title_en,
-            R.string.crop_production_card_title_en,R.string.crop_production_card_title_en,
-            R.string.crop_production_card_title_en,R.string.crop_production_card_title_en};
+    private Integer[] englishTexts={R.string.crop_production_card_title_en,R.string.treatment_card_title_en,
+            R.string.storage_card_title_en,R.string.survey_card_title_en,
+            R.string.horticulture_card_title_en,R.string.policy_card_title_en};
 
-    private String[] backgroundColors={"#d57fe4","#f4a04c","#ca684d","#ca684d","#ca684d","#ca684d"};
+    private String[] backgroundColors={"#1CC959","#8AEB4D","#07F5B2","#F0A356","#94BA09","#EDA43E"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
