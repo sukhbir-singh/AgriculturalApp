@@ -11,4 +11,9 @@
         <item>MIZORAM</item>
         <item>PONDICHERRY</item>
     </string-array>
+    <string-array name="Days">
+        <item>Today</item>
+        <item>Yesterday</item>
+        <item>Day before Yesterday</item>
+    </string-array>
 </resources>
