@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private MainAdapter adapter;
 
-    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.drawable.production_main,R.drawable.horticulture_main,R.raw.govp};
+    private Integer[] imageUrls={R.raw.crop_production_opt,R.raw.treat,R.raw.stor,R.drawable.production_main,R.drawable.horticulture_main,R.raw.govp};
 
     private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.treatment_card_title_hi,
             R.string.storage_card_title_hi,R.string.survey_card_title_hi,
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
             R.string.storage_card_title_en,R.string.survey_card_title_en,
             R.string.horticulture_card_title_en,R.string.policy_card_title_en};
 
-    private String[] backgroundColors={"#1CC959","#8AEB4D","#07F5B2","#F0A356","#94BA09","#EDA43E"};
+    private String[] backgroundColors={"#1CC959","#8AEB4D","#07F5B2","#F0A356","#94BA09","#ff8c66"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

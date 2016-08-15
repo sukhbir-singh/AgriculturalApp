@@ -22,7 +22,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ade2ec">
+            android:background="#9ed1fa">
             <TextView
                 android:id="@+id/heading"
                 android:layout_marginLeft="7dp"

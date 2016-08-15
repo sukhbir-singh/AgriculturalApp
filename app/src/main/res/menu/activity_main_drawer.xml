@@ -4,15 +4,15 @@
     <group>
         <item
             android:id="@+id/bazar_rates_nav"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/rates"
             android:title="Bazar Rates" />
         <item
             android:id="@+id/state_agricultural_nav"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/state"
             android:title="State Agricultural Department" />
         <item
             android:id="@+id/about_nav"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/about"
             android:title="About App" />
     </group>
 
@@ -20,13 +20,13 @@
         <menu>
             <item
                 android:id="@+id/contactus_nav"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/contact_us"
                 android:title="Contact Us" />
             <item
                 android:id="@+id/call_link"
                 android:orderInCategory="100"
                 android:title="@string/action_settings"
-                android:icon="@android:drawable/ic_menu_call" />
+                android:icon="@drawable/icon_call" />
         </menu>
     </item>
 

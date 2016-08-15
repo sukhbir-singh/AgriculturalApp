@@ -30,7 +30,7 @@ public class CropProductionActivity extends AppCompatActivity {
     Integer[] englishTexts={R.string.crop1_en,R.string.crop2_en,
             R.string.crop3_en};
 
-    String[] backgroundColors={"#8cf1ec","#8cf1ec","#8cf1ec"};
+    String[] backgroundColors={"#86c5f9","#86c5f9","#86c5f9"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

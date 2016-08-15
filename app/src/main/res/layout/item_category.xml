@@ -6,21 +6,21 @@
     android:id="@+id/card"
     card_view:cardUseCompatPadding="true"
     android:layout_width="match_parent"
+    android:background="#9ed1fa"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/tools">
 
     <TextView
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
+        android:background="#9ed1fa"
         android:layout_gravity="left"
-        android:padding="15dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:padding="11dp"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"
         android:layout_weight="1"
         android:textColor="#505050"
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
+        android:textSize="21sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title"
         android:text="Title"/>
