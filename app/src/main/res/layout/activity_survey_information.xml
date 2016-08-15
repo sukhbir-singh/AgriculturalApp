@@ -92,7 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_gravity="bottom|right"
-        android:src="@drawable/ic_collapse_holo_light"
         app:elevation="10dp" />
     <ProgressBar
         android:layout_gravity="center"

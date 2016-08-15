@@ -1,78 +1,81 @@
 package akssmk.com.agriculturalapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import akssmk.com.agriculturalapp.modals.CropDetailItem;
-import akssmk.com.agriculturalapp.ExpandableRecyclerView.Adapter;
-import akssmk.com.agriculturalapp.ExpandableRecyclerView.ChildHeading;
-import akssmk.com.agriculturalapp.ExpandableRecyclerView.ParentHeading;
 import akssmk.com.agriculturalapp.R;
-
+import akssmk.com.agriculturalapp.adapters.MainAdapter;
+import akssmk.com.agriculturalapp.modals.MainListItem;
 
 /**
- * Created by sukhbir on 2/8/16.
+ * Created by sukhbir on 15/8/16.
  */
 public class CropProductionActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private Adapter adapter;
+
+    RecyclerView mRecyclerView;
+    ArrayList<MainListItem> list;
+    MainAdapter adapter;
+
+    Integer[] imageUrls={R.raw.wheat,R.raw.wheat,R.raw.wheat};
+
+    Integer[] hindiTexts={R.string.crop1_hi,R.string.crop2_hi,
+            R.string.crop3_hi};
+
+    Integer[] englishTexts={R.string.crop1_en,R.string.crop2_en,
+            R.string.crop3_en};
+
+    String[] backgroundColors={"#d57fe4","#d57fe4","#d57fe4"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.content_recycler);
 
-        setContentView(R.layout.activity_crop_production);
-        recyclerView = (RecyclerView) findViewById(R.id.list);
-        adapter=new Adapter(this,createData());
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
+        list=new ArrayList<>();
+
+        Intent[] links=getIntents();
+
+        for (int i=0;i<imageUrls.length;i++)
+        {
+            MainListItem item=new MainListItem();
+            item.setEnglishText(englishTexts[i]);
+            item.setHindiText(hindiTexts[i]);
+            item.setBackgroundColor(backgroundColors[i]);
+            item.setImageUrl(imageUrls[i]);
+            item.setIntent(links[i]);
+            list.add(item);
+        }
+
+        adapter=new MainAdapter(this,list,R.layout.item_horticulture);
+
+        mRecyclerView=(RecyclerView)findViewById(R.id.recycler);
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(adapter);
+
+        findViewById(R.id.progress).setVisibility(View.GONE);
     }
 
-    private void addItems(ArrayList<CropDetailItem> items){
 
+    public Intent[] getIntents(){
+        Intent[] links={
+                new Intent(this, CropDetailActivity.class),
+                new Intent(this, CropDetailActivity.class),
+                new Intent(this, CropDetailActivity.class),
+        };
+
+        return links;
     }
 
-
-private List<ParentHeading> createData(){
-    List<ParentHeading> list=new ArrayList<>();
-    List<ChildHeading> sublist=new ArrayList<>();
-    //ChildHeading childHeading=new ChildHeading(getData(R.string.wh1));
-    //ChildHeading childHeading1=new ChildHeading(getData(R.string.wh2));
-    //ChildHeading childHeading2=new ChildHeading(getData(R.string.wh3));
-
-   // sublist.add(childHeading);
-    //sublist.add(childHeading1);
-   // sublist.add(childHeading2);
-
-    ParentHeading parentHeading1=new ParentHeading(R.string.crop1,sublist);
-
-    List<ChildHeading> sublist2=new ArrayList<>();
-    List<ChildHeading> sublist3=new ArrayList<>();
-    //ChildHeading childHeading2_1=new ChildHeading(getData(R.string.wh1));
-    //ChildHeading childHeading2_2=new ChildHeading(getData(R.string.wh2));
-    //ChildHeading childHeading2_3=new ChildHeading(getData(R.string.wh3));
-
-
-    //sublist2.add(childHeading2_1);
-    //sublist2.add(childHeading2_2);
-    //sublist2.add(childHeading2_3);
-
-    ParentHeading parentHeading2=new ParentHeading(R.string.crop2,sublist2);
-    ParentHeading parentHeading3=new ParentHeading(R.string.crop3,sublist3);
-
-    list.add(parentHeading1);
-    list.add(parentHeading2);
-    list.add(parentHeading3);
-    return list;
 }
 
-    private String getData(int id){
-        return getResources().getString(id);
-    }
-}

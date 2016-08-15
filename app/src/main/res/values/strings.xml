@@ -66,9 +66,12 @@
     <string name="wheat_h13">13.कटाई-गहाई</string>
     <string name="wheat_h14">14.उपज एवं भंडारण</string>
 
-    <string name="crop1">गेंहू की उन्नत खेती </string>
-    <string name="crop2">धान अर्थात चावल की वैज्ञानिक खेती </string>
-    <string name="crop3">Crop3</string>
+    <string name="crop1_hi">गेंहू की उन्नत खेती </string>
+    <string name="crop2_hi">धान अर्थात चावल की वैज्ञानिक खेती </string>
+    <string name="crop3_hi">Crop3</string>
+    <string name="crop1_en">Wheat Production Methods</string>
+    <string name="crop2_en">Paddy Production Methods</string>
+    <string name="crop3_en">Pulse Production Methods</string>
 
     <string name="wh1">
         गेहूँ की खेती विश्व के प्रायः हर भाग में होती है ।
