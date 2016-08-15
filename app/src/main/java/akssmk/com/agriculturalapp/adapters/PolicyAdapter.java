@@ -2,6 +2,9 @@ package akssmk.com.agriculturalapp.adapters;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +16,12 @@ import java.util.ArrayList;
 import akssmk.com.agriculturalapp.R;
 
 public class PolicyAdapter extends RecyclerView.Adapter<PolicyAdapter.viewHolder> {
+    private String[] links;
     private ArrayList<String> list=new ArrayList<>();
     private Context context;
 
-    public PolicyAdapter(Context context,ArrayList<String> list) {
+    public PolicyAdapter(Context context,ArrayList<String> list,String[] links) {
+        this.links=links;
         this.context = context;
         this.list=list;
     }
@@ -32,9 +37,18 @@ public class PolicyAdapter extends RecyclerView.Adapter<PolicyAdapter.viewHolder
     }
 
     @Override
-    public void onBindViewHolder(viewHolder holder, int position) {
+    public void onBindViewHolder(viewHolder holder, final int position) {
        // if(!list.get(position).title.isEmpty()&&list.get(position).title.length()!=0){
         holder.textView.setText(list.get(position));
+
+
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browser =new Intent(Intent.ACTION_VIEW,Uri.parse(links[position]));
+                context.startActivity(browser);
+            }
+        });
         //}
     }
 
@@ -45,9 +59,11 @@ public class PolicyAdapter extends RecyclerView.Adapter<PolicyAdapter.viewHolder
 
     public static class viewHolder extends RecyclerView.ViewHolder{
         TextView textView;
+        CardView card;
         public viewHolder(View itemView) {
             super(itemView);
             textView= (TextView) itemView.findViewById(R.id.title);
+            card= (CardView) itemView.findViewById(R.id.card);
         }
     }
 }
