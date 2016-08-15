@@ -96,6 +96,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SurveyInformation" />
         </activity>
+        <activity
+            android:name=".BazaarActivity2"
+            android:label="@string/title_activity_survey"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SurveyInformation" />
+        </activity>
         <activity android:name=".CropDetailActivity"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">

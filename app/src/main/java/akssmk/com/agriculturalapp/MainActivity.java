@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, Select_State_Bazaar.class));
 
         }else if(id == R.id.state_agricultural_nav){
+            startActivity(new Intent(MainActivity.this,BazaarActivity2.class));
 
         }else if(id == R.id.about_nav){
 
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity
                 try{
                     startActivity(in);
                 }catch (android.content.ActivityNotFoundException ex){
-                    Toast.makeText(getApplicationContext(), "yourActivity is not founded", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Activity is not founded", Toast.LENGTH_SHORT).show();
                 }
 
             }

@@ -1,18 +1,19 @@
 package akssmk.com.agriculturalapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.util.ArrayList;
-
-import akssmk.com.agriculturalapp.ExpandableRecyclerView.Adapter;
 
 public class CropDetailActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
     private  CropActivityAdapter adapter;
+    ProgressBar bar;
 
     ArrayList<CropDetailItem> items;
 
@@ -33,6 +34,8 @@ public class CropDetailActivity extends AppCompatActivity {
         setContentView(R.layout.content_recycler);
 
         mRecyclerView=(RecyclerView)findViewById(R.id.recycler);
+        bar=(ProgressBar)findViewById(R.id.progress);
+        bar.setVisibility(View.GONE);
         items=new ArrayList<>();
         for(int i=0;i<headings.length;i++)
         {
