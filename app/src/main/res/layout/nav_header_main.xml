@@ -9,7 +9,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:elevation="5dp"
+        android:elevation="1dp"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:textColor="#fff"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:paddingLeft="10dp"
             android:layout_marginTop="50dp"
             android:id="@+id/hackathon_text"
@@ -41,6 +41,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
+            android:textSize="14sp"
             android:layout_alignParentBottom="true"
             android:textColor="#fff"
             android:paddingLeft="10dp"
