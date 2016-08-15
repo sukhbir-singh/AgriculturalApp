@@ -8,18 +8,18 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name=".MyApplication"
+        android:name=".application.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashStyle">
             <intent-filter>
@@ -29,87 +29,83 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Select_Policy"
+            android:name=".activities.Select_Policy"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
         <activity
-            android:name=".CropProductionActivity"
+            android:name=".activities.CropProductionActivity"
             android:label="Tap in the title"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
         <activity
-            android:name=".Select_State_Bazaar"
+            android:name=".activities.Select_State_Bazaar"
             android:label="Select State"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
         <activity
-            android:name=".ShowRates"
-            android:label="@string/title_activity_show_rates"
-            android:theme="@style/AppTheme"/>
-        <activity
-            android:name=".SurveyActivity"
+            android:name=".activities.SurveyActivity"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
         <activity
-            android:name=".HorticultureActivity"
+            android:name=".activities.HorticultureActivity"
             android:label="@string/title_activity_horticulture"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
         <activity
-            android:name=".SurveyInformation"
+            android:name=".activities.SurveyInformation"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SurveyActivity" />
+                android:value=".activities.SurveyActivity" />
         </activity>
         <activity
-            android:name=".BazaarInformation"
+            android:name=".activities.BazaarInformation"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SurveyActivity" />
+                android:value=".activities.SurveyActivity" />
         </activity>
         <activity
-            android:name=".GraphActivity"
+            android:name=".activities.GraphActivity"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SurveyInformation" />
+                android:value=".activities.SurveyInformation" />
         </activity>
         <activity
-            android:name=".BazaarActivity2"
+            android:name=".activities.BazaarActivity2"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SurveyInformation" />
+                android:value=".activities.SurveyInformation" />
         </activity>
-        <activity android:name=".CropDetailActivity"
+        <activity android:name=".activities.CropDetailActivity"
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CropProductionActivity"/>
+                android:value=".activities.CropProductionActivity"/>
         </activity>
     </application>
 

@@ -17,7 +17,7 @@ import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import java.util.List;
 
-import akssmk.com.agriculturalapp.CropDetailActivity;
+import akssmk.com.agriculturalapp.activities.CropDetailActivity;
 import akssmk.com.agriculturalapp.R;
 
 /**
@@ -40,8 +40,8 @@ public class Adapter extends ExpandableRecyclerAdapter<Adapter.ParentHolder,Adap
 
     @Override
     public ChildHolder onCreateChildViewHolder(ViewGroup childViewGroup) {
-        View v= LayoutInflater.from(childViewGroup.getContext()).inflate(R.layout.item_crop_child,childViewGroup,false);
-        return new ChildHolder(v);
+        //View v= LayoutInflater.from(childViewGroup.getContext()).inflate(R.layout.item_crop_child,childViewGroup,false);
+        return null;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class Adapter extends ExpandableRecyclerAdapter<Adapter.ParentHolder,Adap
          ExpandableTextView childView;
         public ChildHolder(View itemView) {
             super(itemView);
-            childView= (ExpandableTextView) itemView.findViewById(R.id.expand_text_view);;
+            //childView= (ExpandableTextView) itemView.findViewById(R.id.expand_text_view);;
         }
     }
     public static class ParentHolder extends ParentViewHolder{
