@@ -22,7 +22,7 @@ public class CropProductionActivity extends AppCompatActivity {
     ArrayList<MainListItem> list;
     MainAdapter adapter;
 
-    Integer[] imageUrls={R.raw.wheat,R.raw.wheat,R.raw.wheat};
+    Integer[] imageUrls={R.raw.wheat,R.raw.paddy,R.raw.arhar};
 
     Integer[] hindiTexts={R.string.crop1_hi,R.string.crop2_hi,
             R.string.crop3_hi};
@@ -30,7 +30,7 @@ public class CropProductionActivity extends AppCompatActivity {
     Integer[] englishTexts={R.string.crop1_en,R.string.crop2_en,
             R.string.crop3_en};
 
-    String[] backgroundColors={"#d57fe4","#d57fe4","#d57fe4"};
+    String[] backgroundColors={"#8cf1ec","#8cf1ec","#8cf1ec"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,11 +68,14 @@ public class CropProductionActivity extends AppCompatActivity {
 
 
     public Intent[] getIntents(){
-        Intent[] links={
-                new Intent(this, CropDetailActivity.class),
-                new Intent(this, CropDetailActivity.class),
-                new Intent(this, CropDetailActivity.class),
-        };
+        Intent i1=new Intent(this, CropDetailActivity.class);
+        Intent i2=new Intent(this, CropDetailActivity.class);
+        Intent i3=new Intent(this, CropDetailActivity.class);
+        i1.putExtra("number",1);
+        i2.putExtra("number",2);
+        i3.putExtra("number",3);
+
+        Intent[] links={ i1, i2, i3 };
 
         return links;
     }

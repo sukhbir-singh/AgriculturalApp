@@ -18,6 +18,8 @@ public class Select_Policy extends AppCompatActivity {
     private  ArrayList list;
     private RecyclerView recyclerView;
 
+    private String[] links;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,8 @@ public class Select_Policy extends AppCompatActivity {
 
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+
+        links=getResources().getStringArray(R.array.policies_link);
 
         if(getSupportActionBar()!=null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -41,7 +45,7 @@ public class Select_Policy extends AppCompatActivity {
             list.add(array[i]);
         }
 
-        adapter = new PolicyAdapter(this,list);
+        adapter = new PolicyAdapter(this,list,links);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

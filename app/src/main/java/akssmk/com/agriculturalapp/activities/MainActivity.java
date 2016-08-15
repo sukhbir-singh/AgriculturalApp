@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private MainAdapter adapter;
 
-    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.drawable.production_main,R.drawable.horticulture_main,R.drawable.scheme};
+    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.drawable.production_main,R.drawable.horticulture_main,R.raw.govp};
 
     private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.treatment_card_title_hi,
             R.string.storage_card_title_hi,R.string.survey_card_title_hi,
