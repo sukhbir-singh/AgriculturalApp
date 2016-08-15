@@ -12,6 +12,7 @@
     <style name="SplashStyle" parent="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:background">#fff</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private MainAdapter adapter;
 
-    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.raw.graph,R.raw.hrt,R.raw.scheme};
+    private Integer[] imageUrls={R.raw.cm,R.raw.treat,R.raw.stor,R.drawable.production_main,R.drawable.horticulture_main,R.drawable.scheme};
 
     private Integer[] hindiTexts={R.string.crop_production_card_title_hi,R.string.treatment_card_title_hi,
             R.string.storage_card_title_hi,R.string.survey_card_title_hi,
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity
 
                 try{
                     startActivity(in);
-                }catch (android.content.ActivityNotFoundException ex){
+                }catch (Exception ex){
                     Toast.makeText(getApplicationContext(), "Activity is not founded", Toast.LENGTH_SHORT).show();
                 }
 

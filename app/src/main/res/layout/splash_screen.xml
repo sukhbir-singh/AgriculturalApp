@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/splash_background"
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
         android:id="@+id/imageView2"
-        android:src="@drawable/logo"
-        android:layout_centerInParent="true"
-       />
+        android:src="@raw/splash_image"
+        android:layout_centerInParent="true" />
 
     <TextView
-        android:textStyle="bold"
-        android:textColor="#0728df"
+        android:textColor="#000"
         android:textSize="25dp"
+        android:fontFamily="Roboto-Thin"
+        android:textStyle="normal"
         android:text="AGRICULTURE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

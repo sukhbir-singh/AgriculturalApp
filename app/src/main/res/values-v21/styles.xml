@@ -8,7 +8,7 @@
     </style>
 
     <style name="SplashStyle" parent="AppTheme.NoActionBar">
-        <item name="android:background">@color/splash_background</item>
+        <item name="android:background">#fff</item>
         <item name="android:statusBarColor">@color/splash_background_dark</item>
     </style>
 
