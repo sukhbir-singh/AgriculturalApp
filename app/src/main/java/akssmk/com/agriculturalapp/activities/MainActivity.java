@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity
             builder.setTitle(String.format("%1$s", getString(R.string.about)));
             builder.setMessage(getResources().getText(R.string.about_text));
             builder.setPositiveButton("OK", null);
-            builder.setIcon(R.drawable.icon);
+            builder.setIcon(R.mipmap.ic_launcher);
             AlertDialog welcomeAlert = builder.create();
             welcomeAlert.show();
             ((TextView) welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());

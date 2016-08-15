@@ -45,7 +45,10 @@ public class CropDetailActivity extends AppCompatActivity {
             temp=data1;
         }else if(num==2){
             temp=data2;
+        }else if(num==3){
+            temp=data2;
         }
+
 
         mRecyclerView=(RecyclerView)findViewById(R.id.recycler);
         bar=(ProgressBar)findViewById(R.id.progress);
