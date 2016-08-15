@@ -87,6 +87,7 @@
 
 </LinearLayout>
     <android.support.design.widget.FloatingActionButton
+        android:src="@drawable/fab"
         android:id="@+id/graph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

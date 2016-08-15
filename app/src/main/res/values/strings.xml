@@ -1,13 +1,40 @@
 <resources>
     <string-array name="policies">
-        <item name="policy1">राष्ट्रीय कृषि बीमा योजना</item>
+        <item name="policy1">प्रधानमंत्री फसल बीमा योजना</item>
+
         <item name="policy2">प्रधानमंत्री कृषि सिंचाई योजना </item>
+
         <item name="policy3">मिनी कामधेनू डेयरी योजना</item>
+
         <item name="policy4">जैविक खेती के लिए सब्सिडी/आर्थिक सहायता</item>
-        <item name="policy5">किसान क्रेडिट कार्ड</item>
+
+        <item name="policy5">किसान क्रेडिट कार्ड</item>     http:
+
         <item name="policy6">राष्ट्रीय खाद्य सुरक्षा मिशन</item>
+
         <item name="policy7">फसल बीमा का क्लेम के नियम</item>
+
         <item name="policy8">किसानों को 7% ब्याज पर मिलेगा 3 लाख का लोन</item>
+
+    </string-array>
+
+    <string-array name="policies_link">
+
+        <item name="link1">http://agri-insurance.gov.in/Login.aspx</item>
+
+        <item name="link2">http://kisanhelp.in/government-policies/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8%E0%A4%AE%E0%A4%82%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80-%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A4%BF-%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%9A%E0%A4%BE%E0%A4%88-%E0%A4%AF%E0%A5%8B%E0%A4%9C%E0%A4%A8%E0%A4%BE</item> //
+
+        <item name="link3">http://animalhusb.up.nic.in/silent%20features%20mini%20kamdhenu%20hindi.htm</item>
+
+        <item name="link4">http://kisanhelp.in/government-policies/%E0%A4%9C%E0%A5%88%E0%A4%B5%E0%A4%BF%E0%A4%95-%E0%A4%96%E0%A5%87%E0%A4%A4%E0%A5%80-%E0%A4%95%E0%A5%87-%E0%A4%B2%E0%A4%BF%E0%A4%8F-%E0%A4%B8%E0%A4%AC%E0%A5%8D%E0%A4%B8%E0%A4%BF%E0%A4%A1%E0%A5%80%E0%A4%86%E0%A4%B0%E0%A5%8D%E0%A4%A5%E0%A4%BF%E0%A4%95-%E0%A4%B8%E0%A4%B9%E0%A4%BE%E0%A4%AF%E0%A4%A4%E0%A4%BE</item> //
+
+        <item name="link5"> http://kisanhelp.in/government-policies/%E0%A4%95%E0%A4%BF%E0%A4%B8%E0%A4%BE%E0%A4%A8-%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%A1%E0%A4%BF%E0%A4%9F-%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A1</item>
+
+        <item name="link6">http://kisanhelp.in/government-policies/%E0%A4%B0%E0%A4%BE%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A5%80%E0%A4%AF-%E0%A4%96%E0%A4%BE%E0%A4%A6%E0%A5%8D%E0%A4%AF-%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE-%E0%A4%AE%E0%A4%BF%E0%A4%B6%E0%A4%A8</item>      //
+
+        <item name="link7">http://kisanhelp.in/government-policies/%E0%A4%AB%E0%A4%B8%E0%A4%B2-%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE-%E0%A4%95%E0%A4%BE-%E0%A4%95%E0%A5%8D%E0%A4%B2%E0%A5%87%E0%A4%AE-%E0%A4%95%E0%A5%87-%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE</item>  //
+
+        <item name="link8">http://kisanhelp.in/government-policies/%E0%A4%95%E0%A4%BF%E0%A4%B8%E0%A4%BE%E0%A4%A8%E0%A5%8B%E0%A4%82-%E0%A4%95%E0%A5%8B-7-%E0%A4%AC%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%9C-%E0%A4%AA%E0%A4%B0-%E0%A4%AE%E0%A4%BF%E0%A4%B2%E0%A5%87%E0%A4%97%E0%A4%BE-3-%E0%A4%B2%E0%A4%BE%E0%A4%96-%E0%A4%95%E0%A4%BE-%E0%A4%B2%E0%A5%8B%E0%A4%A8</item> //
 
     </string-array>
 
@@ -51,7 +78,7 @@
     <string name="horticulture_item3_en">guava Production Method</string>
     <string name="horticulture_item3_hi">खेती की उन्‍नत विधि</string>
 
-    <string name="wheat_h1">1.परिचय (Intriduction)</string>
+    <string name="wheat_h1">1.परिचय (Introduction)</string>
     <string name="wheat_h2">2.उपयुक्त जलवायु क्षेत्र</string>
     <string name="wheat_h3">3.भूमि का चयन</string>
     <string name="wheat_h4">4.खेत  की तैयारी</string>
