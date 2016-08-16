@@ -48,6 +48,9 @@ public class TabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         date_string = getArguments().getString("date");
+        state = getArguments().getString("state");
+        district = getArguments().getString("district");
+
         Log.v("dateRecieved", date_string);
         View view = inflater.inflate(R.layout.singletab, container, false);
 
@@ -65,8 +68,8 @@ public class TabFragment extends Fragment {
             district=i.getStringExtra(SurveyActivity.DISTRICT);
             day=i.getStringExtra(SurveyActivity.CROP);*/
 
-            state="Rajasthan";
-            district="Kota";
+           // state="Rajasthan";
+            //district="Kota";
             day=day_string;
 
             day_view.setText(date_string);  //

@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, Select_State_Bazaar.class));
 
         }else if(id == R.id.state_agricultural_nav){
-            startActivity(new Intent(MainActivity.this,BazaarActivity2.class));
+            //startActivity(new Intent(MainActivity.this,BazaarActivity2.class));
 
         }else if(id == R.id.about_nav){
 
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity
                 try{
                     startActivity(in);
                 }catch (Exception ex){
-                    Toast.makeText(getApplicationContext(), "Activity is not founded", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Permissions required", Toast.LENGTH_SHORT).show();
                 }
 
             }

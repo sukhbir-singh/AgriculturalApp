@@ -94,7 +94,7 @@
         </activity>
         <activity
             android:name=".activities.BazaarActivity2"
-            android:label="@string/title_activity_survey"
+            android:label="@string/bazaar_title"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

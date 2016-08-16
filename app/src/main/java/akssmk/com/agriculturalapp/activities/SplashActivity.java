@@ -12,7 +12,7 @@ import akssmk.com.agriculturalapp.R;
  */
 public class SplashActivity extends AppCompatActivity {
 
-    private int SPLASH_LENGTH=1500;
+    private int SPLASH_LENGTH=800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

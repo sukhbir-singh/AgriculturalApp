@@ -11,9 +11,12 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     TabFragment tb1,tb2,tb3;
+    String state,district;
 
-    public ViewPagerAdapter(FragmentManager fm) {
+    public ViewPagerAdapter(FragmentManager fm,String state,String district) {
         super(fm);
+        this.state=state;
+        this.district=district;
     }
 
     @Override
@@ -25,6 +28,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 TabFragment tf=new TabFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("date", "13/08/2016");
+                bundle.putString("state", state);
+                bundle.putString("district", district);
                 tf.setArguments(bundle);
                 tb1=tf;
             }
@@ -35,6 +40,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 TabFragment tf=new TabFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("date", "13/08/2016");
+                bundle.putString("state", state);
+                bundle.putString("district", district);
                 tf.setArguments(bundle);
                 tb2=tf;
             }
@@ -45,6 +52,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
                 TabFragment tf=new TabFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("date", "16/08/2016");
+                bundle.putString("state", state);
+                bundle.putString("district", district);
                 tf.setArguments(bundle);
                 tb3=tf;
             }

@@ -1,5 +1,6 @@
 package akssmk.com.agriculturalapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
@@ -19,17 +20,23 @@ public class BazaarActivity2 extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
-
+    String state,district;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bazaar_information2);
+        Intent i = getIntent();
+
+        if(i!=null){
+            state=i.getStringExtra(SurveyActivity.STATE);
+            district=i.getStringExtra(SurveyActivity.DISTRICT);
+        }
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),state,district);
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.setOffscreenPageLimit(3);
 
