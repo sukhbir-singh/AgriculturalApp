@@ -33,11 +33,6 @@ public class Select_Policy extends AppCompatActivity {
 
         links=getResources().getStringArray(R.array.policies_link);
 
-        if(getSupportActionBar()!=null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("Select Policy");
-        }
-
         list = new ArrayList<>();
 
         list=new ArrayList();

@@ -2,29 +2,54 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@drawable/nav_top"
+    android:background="#117dd4"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="10dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <TextView
-        android:textSize="22sp"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:id="@+id/hackathon_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="Agricultural App"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <ImageView
+        android:elevation="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/sastri_final"
+        android:layout_width="55dp"
+        android:layout_height="100dp" />
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/slogan"
+        android:layout_width="230dp"
+        android:layout_height="190dp" />
 
-    <TextView
-        android:paddingLeft="10dp"
-        android:layout_below="@id/hackathon_text"
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hackathon@HackerEarth" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/hackathon_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Agricultural App"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:textSize="14sp"
+            android:layout_alignParentBottom="true"
+            android:textColor="#fff"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/hackathon_text"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hackathon@HackerEarth" />
+    </LinearLayout>
 
 </RelativeLayout>

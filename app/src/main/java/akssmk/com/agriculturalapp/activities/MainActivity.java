@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
             R.string.storage_card_title_en,R.string.survey_card_title_en,
             R.string.horticulture_card_title_en,R.string.policy_card_title_en};
 
-    private String[] backgroundColors={"#1CC959","#8AEB4D","#07F5B2","#F0A356","#94BA09","#ff8c66"};
+    private String[] backgroundColors={"#35e372","#a4f075","#ffff4d","#70dbdb","#cef63c","#ff9f80"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity
             builder.setTitle(String.format("%1$s", getString(R.string.about)));
             builder.setMessage(getResources().getText(R.string.about_text));
             builder.setPositiveButton("OK", null);
-            builder.setIcon(R.drawable.icon);
+            builder.setIcon(R.mipmap.ic_launcher);
             AlertDialog welcomeAlert = builder.create();
             welcomeAlert.show();
             ((TextView) welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());

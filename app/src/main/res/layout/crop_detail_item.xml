@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="heading 1"/>
             <ImageView
+                android:layout_marginTop="5dp"
                 android:padding="5dp"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -45,12 +46,11 @@
                 />
         </LinearLayout>
         <TextView
+            android:background="#e7f3fd"
             android:id="@+id/detail"
             android:visibility="gone"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
             android:layout_gravity="center"
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_weight="1"
             android:textColor="#505050"
             android:textSize="20dp"

@@ -39,7 +39,8 @@
     </string-array>
 
 
-    <string name="app_name">AgriculturalApp</string>
+    <string name="app_name">Agricultural App</string>
+    <string name="policy_title">Government Schemes</string>
 
     <string name="about">About Application</string>
     <string name="about_text">This app is made for the event Hackathon conducted by Digital India and sponsered by HackerEarth</string>
@@ -397,6 +398,10 @@
 
     <string name="title_activity_show_rates">ShowRates</string>
     <string name="title_activity_survey">Survey</string>
-    <string name="title_activity_horticulture">Horticulture</string>
+    <string name="title_activity_horticulture">Horticulture Crops</string>
+    <string name="crops_production_title">Crops</string>
+    <string name="bazaar_title">Bazaar Rates</string>
+    <string name="production_details_title">Production Details</string>
+    <string name="crop_detail_title">Crop Detail</string>
 
 </resources>
