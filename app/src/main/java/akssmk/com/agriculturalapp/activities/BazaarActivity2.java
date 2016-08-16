@@ -31,6 +31,7 @@ public class BazaarActivity2 extends AppCompatActivity {
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setOffscreenPageLimit(3);
 
         final TabLayout.Tab home = tabLayout.newTab();
         final TabLayout.Tab inbox = tabLayout.newTab();
@@ -42,9 +43,11 @@ public class BazaarActivity2 extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setText("Today");
-        tabLayout.getTabAt(1).setText("Yesterday");
-        tabLayout.getTabAt(2).setText("Before Yesterday");
+        tabLayout.getTabAt(0).setText("Before Yesterday");
+        tabLayout.getTabAt(1).setText("Today");
+        tabLayout.getTabAt(2).setText("Yesterday");
+
+        tabLayout.getTabAt(1).select();
 
         tabLayout.setTabTextColors(ContextCompat.getColorStateList(this, R.drawable.selector_colors));
         tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.indicator));
