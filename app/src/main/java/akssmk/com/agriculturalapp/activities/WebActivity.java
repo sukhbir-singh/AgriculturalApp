@@ -2,10 +2,8 @@ package akssmk.com.agriculturalapp.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import akssmk.com.agriculturalapp.R;
@@ -18,9 +16,6 @@ public class WebActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web);
 
         String link=getIntent().getStringExtra("link");
-
-       final ProgressBar p=(ProgressBar)findViewById(R.id.progress);
-        p.setVisibility(View.VISIBLE);
 
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);

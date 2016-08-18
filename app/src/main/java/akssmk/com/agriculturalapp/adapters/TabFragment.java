@@ -42,6 +42,7 @@ public class TabFragment extends Fragment {
     ProgressBar p;
     String day_string;
     private ArrayList<ItemBazaar> items;
+    View view;
 
     private String URL_FINAL = "http://kharita.freevar.com/agriculture_market.php";
 
@@ -52,7 +53,7 @@ public class TabFragment extends Fragment {
         district = getArguments().getString("district");
 
         Log.v("dateRecieved", date_string);
-        View view = inflater.inflate(R.layout.singletab, container, false);
+        view = inflater.inflate(R.layout.singletab, container, false);
 
         items = new ArrayList<>();
         state_view=(TextView)view.findViewById(R.id.state);
@@ -118,6 +119,15 @@ public class TabFragment extends Fragment {
                         items.add(item);
 
                     }
+
+                    if(items.size()==0){
+                        TextView text=(TextView)view.findViewById(R.id.error_message);
+                        text.setVisibility(View.VISIBLE);
+                    }else{
+                        TextView text=(TextView)view.findViewById(R.id.error_message);
+                        text.setVisibility(View.GONE);
+                    }
+
                     adapter=new BazaarAdapter(getActivity(),items);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                     recyclerView.setAdapter(adapter);
