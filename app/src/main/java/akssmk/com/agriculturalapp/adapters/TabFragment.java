@@ -137,9 +137,9 @@ public class TabFragment extends Fragment {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> map = new HashMap<>();
-                map.put("State",State);
-                map.put("District",District);
-                map.put("Date",Day);
+                map.put("State",State.trim());
+                map.put("District",District.trim());
+                map.put("Date",Day.trim());
                 return map;
             }
         };
