@@ -107,6 +107,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.CropProductionActivity"/>
         </activity>
+
+        <activity android:name=".activities.HorticultureDetailActivity"
+            android:label="@string/crop_detail_title"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HorticultureActivity"/>
+        </activity>
     </application>
 
 </manifest>
