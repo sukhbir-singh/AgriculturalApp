@@ -47,36 +47,36 @@
 
     <string-array name="State_market">
         <item>Select Market</item>
-        <item>Andaman &amp; Nicobar</item>
-        <item>Andhra Pradesh</item>
-        <item>Assam</item>
-        <item>Bihar</item>
-        <item>Chandigarh</item>
-        <item>Chattisgarh</item>
-        <item>Goa</item>
-        <item>Gujarat</item>
-        <item>Haryana</item>
-        <item>Himachal Pradesh</item>
-        <item>Jammu &amp;  Kashmir</item>
-        <item>Jharkhand</item>
-        <item>Karnataka</item>
-        <item>Kerala</item>
-        <item>Madhya Pradesh</item>
-        <item>Maharashtra</item>
-        <item>Manipur</item>
-        <item>Meghalaya</item>
-        <item>Mizoram</item>
-        <item>NCT of Delhi</item>
-        <item>Orissa</item>
-        <item> Pondicherry</item>
-        <item> Punjab</item>
-        <item> Rajasthan</item>
-        <item> Tamil Nadu</item>
-        <item> Telangana</item>
-        <item> Tripura</item>
-        <item>Uttar Pradesh</item>
-        <item> Uttrakhand</item>
-        <item> West Bengal</item>
+       <item>Andaman and Nicobar </item>
+        <item> Andhra Pradesh      </item>
+        <item> Assam               </item>
+        <item> Bihar               </item>
+        <item> Chandigarh          </item>
+        <item> Chattisgarh         </item>
+        <item> Goa                 </item>
+        <item> Gujarat             </item>
+        <item> Haryana             </item>
+        <item> Himachal Pradesh    </item>
+        <item> Jammu and Kashmir   </item>
+        <item> Jharkhand           </item>
+        <item> Karnataka           </item>
+        <item> Kerala              </item>
+        <item> Madhya Pradesh      </item>
+        <item> Maharashtra         </item>
+        <item> Manipur             </item>
+        <item> Meghalaya           </item>
+        <item> Mizoram             </item>
+        <item> NCT of Delhi        </item>
+        <item> Orissa              </item>
+        <item> Pondicherry         </item>
+        <item> Punjab              </item>
+        <item> Rajasthan           </item>
+        <item> Tamil Nadu          </item>
+        <item> Telangana           </item>
+        <item> Tripura             </item>
+        <item> Uttar Pradesh       </item>
+        <item> Uttrakhand          </item>
+        <item> West Bengal </item>
     </string-array>
 
     <string-array name="Days">

@@ -58,7 +58,7 @@ public class Select_State_Bazaar extends AppCompatActivity {
         list11.add("Select District");
         list2=new ArrayList<>();
 
-        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.States));
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.State_market));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
