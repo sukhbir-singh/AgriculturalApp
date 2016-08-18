@@ -1,5 +1,6 @@
 package akssmk.com.agriculturalapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
@@ -19,18 +20,25 @@ public class BazaarActivity2 extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
-
+    String state,district;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bazaar_information2);
+        Intent i = getIntent();
+
+        if(i!=null){
+            state=i.getStringExtra(SurveyActivity.STATE);
+            district=i.getStringExtra(SurveyActivity.DISTRICT);
+        }
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),state,district);
         viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setOffscreenPageLimit(3);
 
         final TabLayout.Tab home = tabLayout.newTab();
         final TabLayout.Tab inbox = tabLayout.newTab();
@@ -42,9 +50,11 @@ public class BazaarActivity2 extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setText("Today");
-        tabLayout.getTabAt(1).setText("Yesterday");
-        tabLayout.getTabAt(2).setText("Before Yesterday");
+        tabLayout.getTabAt(0).setText("Before Yesterday");
+        tabLayout.getTabAt(1).setText("Today");
+        tabLayout.getTabAt(2).setText("Yesterday");
+
+        tabLayout.getTabAt(1).select();
 
         tabLayout.setTabTextColors(ContextCompat.getColorStateList(this, R.drawable.selector_colors));
         tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.indicator));

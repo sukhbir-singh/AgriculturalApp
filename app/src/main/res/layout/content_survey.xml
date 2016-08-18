@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         />
     <Spinner
+        android:visibility="gone"
         android:id="@+id/spinner3"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"

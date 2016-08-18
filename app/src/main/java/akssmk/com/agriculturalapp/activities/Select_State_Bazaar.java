@@ -52,7 +52,6 @@ public class Select_State_Bazaar extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         spinner1= (Spinner) findViewById(R.id.spinner1);
         spinner2= (Spinner) findViewById(R.id.spinner2);
-        spinner3= (Spinner) findViewById(R.id.spinner3);
         btnSubmit= (Button) findViewById(R.id.btnSubmit);
         p = (ProgressBar) findViewById(R.id.progress);
         list11=new ArrayList<>();
@@ -84,7 +83,6 @@ public class Select_State_Bazaar extends AppCompatActivity {
 
         arrayAdapter2=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.Days));
         arrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner3.setAdapter(arrayAdapter2);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,14 +90,12 @@ public class Select_State_Bazaar extends AppCompatActivity {
 
                 String State=arrayAdapter.getItem(spinner1.getSelectedItemPosition());
                 String District=arrayAdapter1.getItem(spinner2.getSelectedItemPosition());
-                String Crop=arrayAdapter2.getItem(spinner3.getSelectedItemPosition());
 
-                if(!State.isEmpty()&&!District.isEmpty()&&!Crop.isEmpty()){
+                if(!State.isEmpty()&&!District.isEmpty()){
 
-                    Intent intent=new Intent(Select_State_Bazaar.this,BazaarInformation.class);
+                    Intent intent=new Intent(Select_State_Bazaar.this,BazaarActivity2.class);
                     intent.putExtra(STATE,State);
                     intent.putExtra(DISTRICT,District);
-                    intent.putExtra(CROP,Crop);
                     startActivity(intent);
                 }
 
