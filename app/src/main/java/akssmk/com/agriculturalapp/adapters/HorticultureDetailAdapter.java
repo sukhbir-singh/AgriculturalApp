@@ -47,7 +47,7 @@ public void onBindViewHolder(final viewHolder holder, final int position) {
        // holder.linear.setBackgroundColor(Color.parseColor(list.get(position).getBackgroundColor()));
         holder.heading.setText(list.get(position).getHeading());
         holder.detail.setText(list.get(position).getDetail());
-        //holder.image.setImageResource(list.get(position).getImage());
+        holder.image.setImageResource(list.get(position).getImage());
 
         if(check[position]==false){
             holder.detail.setVisibility(View.GONE);

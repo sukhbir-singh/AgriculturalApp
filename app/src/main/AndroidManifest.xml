@@ -109,7 +109,7 @@
         </activity>
 
         <activity android:name=".activities.HorticultureDetailActivity"
-            android:label="@string/crop_detail_title"
+            android:label="@string/title_activity_horticulture"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
