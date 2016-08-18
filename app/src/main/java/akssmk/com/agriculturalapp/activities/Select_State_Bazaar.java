@@ -55,20 +55,30 @@ public class Select_State_Bazaar extends AppCompatActivity {
         btnSubmit= (Button) findViewById(R.id.btnSubmit);
         p = (ProgressBar) findViewById(R.id.progress);
         list11=new ArrayList<>();
+        list11.add("Select District");
         list2=new ArrayList<>();
-        p.setVisibility(View.VISIBLE);
 
-        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.States));
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.State_market));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String k = arrayAdapter.getItem(parent.getSelectedItemPosition());
-                if (k != null)
-                    sendRequest(URL_DISTRICT, "State", k);
-                p.setVisibility(View.VISIBLE);
 
+                if (k != null && spinner1.getSelectedItemPosition() != 0) {
+                    list11 = new ArrayList<>();
+                    list11.add("Select District");
+                    sendRequest(URL_DISTRICT, "State", k);
+                }
+                else if(spinner1.getSelectedItemPosition()==0)
+                {
+                    list11 = new ArrayList<>();
+                    list11.add("Select District");
+                    arrayAdapter1 = new ArrayAdapter<String>(Select_State_Bazaar.this, android.R.layout.simple_spinner_dropdown_item, list11);
+                    arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner2.setAdapter(arrayAdapter1);
+                }
             }
 
             @Override
@@ -88,24 +98,27 @@ public class Select_State_Bazaar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String State=arrayAdapter.getItem(spinner1.getSelectedItemPosition());
-                String District=arrayAdapter1.getItem(spinner2.getSelectedItemPosition());
+                String State = arrayAdapter.getItem(spinner1.getSelectedItemPosition());
+                String District = arrayAdapter1.getItem(spinner2.getSelectedItemPosition());
 
-                if(!State.isEmpty()&&!District.isEmpty()){
+                if (!State.isEmpty() && !District.isEmpty() && (!State.equals("Select State"))) {
 
-                    Intent intent=new Intent(Select_State_Bazaar.this,BazaarActivity2.class);
-                    intent.putExtra(STATE,State);
-                    intent.putExtra(DISTRICT,District);
+                    Intent intent = new Intent(Select_State_Bazaar.this, BazaarActivity2.class);
+                    intent.putExtra(STATE, State);
+                    intent.putExtra(DISTRICT, District);
                     startActivity(intent);
                 }
 
             }
         });
 
+        p.setVisibility(View.GONE);
+
     }
 
     private void sendRequest(final String url, final String key, final String value){
-        p.setVisibility(View.GONE);
+        Log.v("K",value+"");
+        p.setVisibility(View.VISIBLE);
 
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -114,12 +127,14 @@ public class Select_State_Bazaar extends AppCompatActivity {
 
                 if(url==URL_DISTRICT){
                     arrayAdapter1.clear();
+                    list11.add("Select District");
                     list11=parseJson(response,"result","District");
                     arrayAdapter1.addAll(list11);
                     arrayAdapter1.notifyDataSetChanged();
                 }
                 else if (url==URL_CROP){
                     arrayAdapter2.clear();
+                    list2.add("Select Crop");
                     list2=parseJson(response,"result","Crop");
                     arrayAdapter2.addAll(list2);
                     arrayAdapter2.notifyDataSetChanged();
@@ -130,7 +145,7 @@ public class Select_State_Bazaar extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                p.setVisibility(View.GONE);
             }
         }){
             @Override

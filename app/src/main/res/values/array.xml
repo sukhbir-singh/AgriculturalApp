@@ -2,15 +2,83 @@
 
 <resources>
     <string-array name="States">
-        <item>RAJASTHAN</item>
-        <item>UTTAR PRADESH</item>
+        <item>Select State</item>
+        <item>A &amp; N ISLANDS</item>
+        <item>ANDHRA PRADESH</item>
+        <item>ARUNACHAL PRADESH</item>
+        <item>ASSAM</item>
+        <item>BIHAR</item>
+        <item>CHANDIGARH</item>
+        <item>CHHATTISGARH</item>
+        <item>D &amp; N HAVELI</item>
+        <item>DELHI</item>
+        <item>GOA</item>
+        <item>GUJARAT</item>
+        <item>HARYANA</item>
+        <item>HIMACHAL PRADESH</item>
+        <item>JAMMU &amp; KASHMIR</item>
         <item>JHARKHAND</item>
-        <item>TRIPURA</item>
-        <item>SIKKIM</item>
-        <item>PUNJAB</item>
+        <item>KARNATAKA</item>
+        <item>KERALA</item>
+        <item>MADHYA PRADESH</item>
+        <item>MAHARASHTRA</item>
+        <item>MANIPUR</item>
+        <item>MEGHALYA</item>
         <item>MIZORAM</item>
+        <item>NAGALAND</item>
+        <item>ORISSA</item>
         <item>PONDICHERRY</item>
+        <item>PUNJAB</item>
+        <item>RAJASTHAN</item>
+        <item>SIKKIM</item>
+        <item>TAMIL NADU</item>
+        <item>TRIPURA</item>
+        <item>UTTAR PRADESH</item>
+        <item>UTTARANCHAL</item>
+        <item>WEST BENGAL</item>
     </string-array>
+    <string-array name="District">
+        <item>Select District</item>
+    </string-array>
+
+    <string-array name="Crop">
+        <item>Select Crop</item>
+    </string-array>
+
+    <string-array name="State_market">
+        <item>Select Market</item>
+       <item>Andaman and Nicobar </item>
+        <item> Andhra Pradesh      </item>
+        <item> Assam               </item>
+        <item> Bihar               </item>
+        <item> Chandigarh          </item>
+        <item> Chattisgarh         </item>
+        <item> Goa                 </item>
+        <item> Gujarat             </item>
+        <item> Haryana             </item>
+        <item> Himachal Pradesh    </item>
+        <item> Jammu and Kashmir   </item>
+        <item> Jharkhand           </item>
+        <item> Karnataka           </item>
+        <item> Kerala              </item>
+        <item> Madhya Pradesh      </item>
+        <item> Maharashtra         </item>
+        <item> Manipur             </item>
+        <item> Meghalaya           </item>
+        <item> Mizoram             </item>
+        <item> NCT of Delhi        </item>
+        <item> Orissa              </item>
+        <item> Pondicherry         </item>
+        <item> Punjab              </item>
+        <item> Rajasthan           </item>
+        <item> Tamil Nadu          </item>
+        <item> Telangana           </item>
+        <item> Tripura             </item>
+        <item> Uttar Pradesh       </item>
+        <item> Uttrakhand          </item>
+        <item> West Bengal </item>
+    </string-array>
+
     <string-array name="Days">
         <item>Today</item>
         <item>Yesterday</item>

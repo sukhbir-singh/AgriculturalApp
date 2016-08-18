@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="8dp"
+    android:layout_margin="4dp"
+    android:id="@+id/card"
+    card_view:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:background="#9ed1fa"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/imageView"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/banana_main"/>
+    <TextView
+        android:id="@+id/english_title"
+        android:textSize="25sp"
+        android:background="#aae7f293"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:text="BANANA"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</android.support.v7.widget.CardView>

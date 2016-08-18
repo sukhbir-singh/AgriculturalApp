@@ -9,6 +9,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
+import akssmk.com.agriculturalapp.adapters.HorticultureAdapter;
 import akssmk.com.agriculturalapp.adapters.MainAdapter;
 import akssmk.com.agriculturalapp.modals.MainListItem;
 import akssmk.com.agriculturalapp.R;
@@ -17,17 +18,13 @@ public class HorticultureActivity extends AppCompatActivity {
 
     RecyclerView mRecyclerView;
     ArrayList<MainListItem> list;
-    MainAdapter adapter;
+    HorticultureAdapter adapter;
 
-    Integer[] imageUrls={R.raw.hor,R.raw.hor,R.raw.hor};
+    Integer[] imageUrls={R.drawable.mango_main,R.drawable.banana_main,R.drawable.guava_main};
 
-    Integer[] hindiTexts={R.string.horticulture_item1_hi,R.string.horticulture_item2_hi,
-            R.string.horticulture_item3_hi};
 
     Integer[] englishTexts={R.string.horticulture_item1_en,R.string.horticulture_item2_en,
             R.string.horticulture_item3_en};
-
-    String[] backgroundColors={"#d57fe4","#f4a04c","#ca684d"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +43,13 @@ public class HorticultureActivity extends AppCompatActivity {
         {
             MainListItem item=new MainListItem();
             item.setEnglishText(englishTexts[i]);
-            item.setHindiText(hindiTexts[i]);
-            item.setBackgroundColor(backgroundColors[i]);
+
             item.setImageUrl(imageUrls[i]);
             item.setIntent(links[i]);
             list.add(item);
         }
 
-        adapter=new MainAdapter(this,list,R.layout.item_horticulture);
+        adapter=new HorticultureAdapter(this,list);
 
         mRecyclerView=(RecyclerView)findViewById(R.id.recycler);
 
@@ -64,12 +60,16 @@ public class HorticultureActivity extends AppCompatActivity {
     }
 
     public Intent[] getIntents(){
-        Intent[] links={
-                new Intent(this, CropProductionActivity.class),
-                new Intent(this, Select_Policy.class),
-                new Intent(this, Select_Policy.class),
-        };
+        Intent i1=new Intent(this, HorticultureDetailActivity.class);
+        Intent i2=new Intent(this, HorticultureDetailActivity.class);
+        Intent i3=new Intent(this, HorticultureDetailActivity.class);
+        i1.putExtra("number",1);
+        i2.putExtra("number",2);
+        i3.putExtra("number",3);
+
+        Intent[] links={ i1, i2, i3 };
 
         return links;
     }
+
 }
