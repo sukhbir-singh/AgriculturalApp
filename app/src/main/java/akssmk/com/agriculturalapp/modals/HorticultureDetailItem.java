@@ -1,12 +1,10 @@
 package akssmk.com.agriculturalapp.modals;
 
-import java.util.ArrayList;
-
 /**
  * Created by mustcoder26 on 7/8/16.
  */
-public class CropDetailItem {
-    private Integer heading;
+public class HorticultureDetailItem {
+    private String heading;
     private Integer detail;
     private Integer image;
 
@@ -18,11 +16,11 @@ public class CropDetailItem {
         this.image = image;
     }
 
-    public Integer getHeading() {
+    public String getHeading() {
         return heading;
     }
 
-    public void setHeading(Integer heading) {
+    public void setHeading(String heading) {
         this.heading = heading;
     }
 
