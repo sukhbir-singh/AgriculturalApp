@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/english_title"
         android:textSize="25sp"
-        android:background="#cfe8f7a3"
+        android:background="#aae7f293"
         android:gravity="center"
         android:layout_gravity="bottom"
         android:text="BANANA"

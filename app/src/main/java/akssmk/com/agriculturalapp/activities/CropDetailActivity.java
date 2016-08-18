@@ -32,21 +32,27 @@ public class CropDetailActivity extends AppCompatActivity {
     Integer[] data2={R.string.ph1,R.string.ph2,R.string.ph3,R.string.ph4,R.string.ph5,R.string.ph6,R.string.ph7,
             R.string.ph8,R.string.ph9,R.string.ph10,R.string.ph11,R.string.ph12,R.string.ph13,R.string.ph14};
 
+    Integer[] data3={R.string.ad1,R.string.ad2,R.string.ad3,R.string.ad4,R.string.ad5,R.string.ad6,R.string.ad7,
+            R.string.ad8,R.string.ad9,R.string.ad10,R.string.ad11};
+
+    Integer[] headings_a={ R.string.ah1,R.string.ah2,R.string.ah3,R.string.ah4,R.string.ah5,R.string.ah6,R.string.ah7,
+            R.string.ah8,R.string.ah9,R.string.ah10,R.string.ah11};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_recycler);
 
-        Integer[] temp=null;
+       Integer[] temp1=null;
+        Integer[] temp2=null;
 
         int num=(int)getIntent().getIntExtra("number",1);
         if(num==1){
-            temp=data1;
+            temp1=data1;
         }else if(num==2){
-            temp=data2;
+            temp1=data2;
         }else if(num==3){
-            temp=data2;
+            temp2=data3;
         }
 
 
@@ -54,11 +60,26 @@ public class CropDetailActivity extends AppCompatActivity {
         bar=(ProgressBar)findViewById(R.id.progress);
         bar.setVisibility(View.GONE);
         items=new ArrayList<>();
-        for(int i=0;i<headings.length;i++)
+
+        int l;
+        if(num==3)
+            l=headings_a.length;
+        else
+            l=headings.length;
+
+        for(int i=0;i<l;i++)
         {
             CropDetailItem item=new CropDetailItem();
-            item.setHeading(headings[i]);
-            item.setDetail(temp[i]);
+            if(num==3){
+                item.setHeading(headings_a[i]);
+                item.setDetail(temp2[i]);
+            }
+            else{
+                item.setHeading(headings[i]);
+                item.setDetail(temp1[i]);
+            }
+
+
             items.add(item);
         }
 
