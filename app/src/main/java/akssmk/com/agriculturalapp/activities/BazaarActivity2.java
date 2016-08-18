@@ -6,6 +6,12 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import akssmk.com.agriculturalapp.R;
 import akssmk.com.agriculturalapp.adapters.ViewPagerAdapter;
@@ -14,8 +20,6 @@ import akssmk.com.agriculturalapp.adapters.ViewPagerAdapter;
  * Created by sukhbir on 15/8/16.
  */
 public class BazaarActivity2 extends AppCompatActivity {
-
-    //Declaring All The Variables Needed
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -50,9 +54,21 @@ public class BazaarActivity2 extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setText("Before Yesterday");
-        tabLayout.getTabAt(1).setText("Today");
-        tabLayout.getTabAt(2).setText("Yesterday");
+        Calendar cal2 = Calendar.getInstance();
+
+        String date = new SimpleDateFormat("dd/MM/yyyy").format(new Date(cal2.getTimeInMillis()));
+
+        cal2.add(Calendar.DATE, -1);
+        Date dt2 = new Date(cal2.getTimeInMillis());
+        String date_pre = new SimpleDateFormat("dd/MM/yyyy").format(dt2);
+
+        cal2.add(Calendar.DATE,-1);
+        Date dt3 = new Date(cal2.getTimeInMillis());
+        String date_pre_pre = new SimpleDateFormat("dd/MM/yyyy").format(dt3);
+
+        tabLayout.getTabAt(0).setText(date_pre_pre);
+        tabLayout.getTabAt(1).setText(date);
+        tabLayout.getTabAt(2).setText(date_pre);
 
         tabLayout.getTabAt(1).select();
 

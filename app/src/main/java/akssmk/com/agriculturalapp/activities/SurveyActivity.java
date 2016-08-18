@@ -50,7 +50,7 @@ public class SurveyActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_survey);
+        setContentView(R.layout.content_survey2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         spinner1= (Spinner) findViewById(R.id.spinner1);
         spinner2= (Spinner) findViewById(R.id.spinner2);
@@ -58,7 +58,9 @@ public class SurveyActivity extends AppCompatActivity{
         btnSubmit= (Button) findViewById(R.id.btnSubmit);
         p = (ProgressBar) findViewById(R.id.progress);
         list11=new ArrayList<>();
+        list11.add("Select District");
          list2=new ArrayList<>();
+        list2.add("Select Crop");
         p.setVisibility(View.VISIBLE);
 
          arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.States));
@@ -68,8 +70,22 @@ public class SurveyActivity extends AppCompatActivity{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String k = arrayAdapter.getItem(parent.getSelectedItemPosition());
-                if (k != null)
+                if (k != null && spinner1.getSelectedItemPosition() != 0) {
+
                     sendRequest(URL_DISTRICT, "State", k);
+                } else if (spinner1.getSelectedItemPosition() == 0) {
+                    list11 = new ArrayList<>();
+                    list11.add("Select District");
+                    arrayAdapter1 = new ArrayAdapter<String>(SurveyActivity.this, android.R.layout.simple_spinner_dropdown_item, list11);
+                    arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner2.setAdapter(arrayAdapter1);
+
+                    list2 = new ArrayList<>();
+                    list2.add("Select Crop");
+                    arrayAdapter2 = new ArrayAdapter<String>(SurveyActivity.this, android.R.layout.simple_spinner_dropdown_item, list2);
+                    arrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner3.setAdapter(arrayAdapter2);
+                }
             }
 
             @Override
@@ -86,9 +102,16 @@ public class SurveyActivity extends AppCompatActivity{
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 String k = arrayAdapter1.getItem(parent.getSelectedItemPosition());
-                if (k != null) {
-                    Log.d("Key",k);
+                if (k != null && spinner2.getSelectedItemPosition() != 0) {
+                    Log.d("Key", k);
                     sendRequest(URL_CROP, "District", k);
+                } else if (spinner2.getSelectedItemPosition() == 0) {
+
+                    list2 = new ArrayList<>();
+                    list2.add("Select Crop");
+                    arrayAdapter2 = new ArrayAdapter<String>(SurveyActivity.this, android.R.layout.simple_spinner_dropdown_item, list2);
+                    arrayAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    spinner3.setAdapter(arrayAdapter2);
                 }
 
             }
@@ -107,37 +130,43 @@ public class SurveyActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
 
-                String State=arrayAdapter.getItem(spinner1.getSelectedItemPosition());
-                String District=arrayAdapter1.getItem(spinner2.getSelectedItemPosition());
-                String Crop=arrayAdapter2.getItem(spinner3.getSelectedItemPosition());
+                String State = arrayAdapter.getItem(spinner1.getSelectedItemPosition());
+                String District = arrayAdapter1.getItem(spinner2.getSelectedItemPosition());
+                String Crop = arrayAdapter2.getItem(spinner3.getSelectedItemPosition());
 
-                if(!State.isEmpty()&&!District.isEmpty()&&!Crop.isEmpty()){
+                if (!State.isEmpty() && !District.isEmpty() && !Crop.isEmpty() && (!State.equals("Select State")) &&
+                        (!District.equals("Select District")) && (!Crop.equals("Select Crop"))) {
 
-                    Intent intent=new Intent(SurveyActivity.this,SurveyInformation.class);
-                    intent.putExtra(STATE,State);
-                    intent.putExtra(DISTRICT,District);
-                    intent.putExtra(CROP,Crop);
+                    Intent intent = new Intent(SurveyActivity.this, SurveyInformation.class);
+                    intent.putExtra(STATE, State);
+                    intent.putExtra(DISTRICT, District);
+                    intent.putExtra(CROP, Crop);
                     startActivity(intent);
                 }
 
             }
         });
 
+        p.setVisibility(View.GONE);
+
     }
 
     private void sendRequest(final String url, final String key, final String value){
+        p.setVisibility(View.VISIBLE);
 
       StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
           @Override
           public void onResponse(String response) {
               if(url==URL_DISTRICT){
                   arrayAdapter1.clear();
+                  list11.add("Select District");
                   list11=parseJson(response,"result","District");
                   arrayAdapter1.addAll(list11);
                   arrayAdapter1.notifyDataSetChanged();
               }
               else if (url==URL_CROP){
                   arrayAdapter2.clear();
+                  list2.add("Select Crop");
                   list2=parseJson(response,"result","Crop");
                   arrayAdapter2.addAll(list2);
                   arrayAdapter2.notifyDataSetChanged();
@@ -148,7 +177,7 @@ public class SurveyActivity extends AppCompatActivity{
       }, new Response.ErrorListener() {
           @Override
           public void onErrorResponse(VolleyError error) {
-
+              p.setVisibility(View.GONE);
           }
       }){
           @Override

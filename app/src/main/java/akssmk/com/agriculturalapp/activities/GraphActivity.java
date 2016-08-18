@@ -1,16 +1,23 @@
 package akssmk.com.agriculturalapp.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.ValueDependentColor;
+import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.DataPointInterface;
+import com.jjoe64.graphview.series.OnDataPointTapListener;
+import com.jjoe64.graphview.series.Series;
 
 import java.util.ArrayList;
 
@@ -30,7 +37,7 @@ public class GraphActivity extends AppCompatActivity {
         text = (TextView) findViewById(R.id.graph_des);
 
         Intent in = getIntent();
-        text.setText("Year vs Production");
+        text.setText("Year vs Production(Tonnes/Hectare)");
 
         Log.v("hi", "111");
         
@@ -57,9 +64,11 @@ public class GraphActivity extends AppCompatActivity {
             Log.v("value", items.get(i).getProduction() + " " + items.get(i).getArea());
 
             total=Double.valueOf(Double.parseDouble(items.get(i).getProduction())/Double.parseDouble(items.get(i).getArea()));
-            DataPoint temp = new DataPoint(Double.parseDouble(items.get(i).getYear()),total );
+            Log.v("check",""+items.get(i).getYear().substring(2,4));
+            DataPoint temp = new DataPoint(Double.parseDouble((items.get(i).getYear())),total );
             ar[i] = temp;
         }
+
 
       /*  graphView = (GraphView) findViewById(R.id.indi_graph);
         BarGraphSeries<DataPoint> series = new BarGraphSeries<>(ar);
@@ -80,7 +89,42 @@ public class GraphActivity extends AppCompatActivity {
         BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(ar);
 
         graph.addSeries(series);
+        series.setValueDependentColor(new ValueDependentColor<DataPoint>() {
+            @Override
+            public int get(DataPoint data) {
+                return Color.rgb((int) data.getX() * 255 / 4, (int) Math.abs(data.getY() * 255 / 6), 100);
+            }
+        });
+        series.setDrawValuesOnTop(true);
+        series.setValuesOnTopColor(Color.RED);
 
+        series.setSpacing(40);
+       /* StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
+        staticLabelsFormatter.setHorizontalLabels(new String[]{"", "Year", ""});
+        staticLabelsFormatter.setVerticalLabels(new String[]{"", "", "Production"});
+        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+*/
+        series.setOnDataPointTapListener(new OnDataPointTapListener() {
+            @Override
+            public void onTap(Series series, DataPointInterface dataPoint) {
+                Toast.makeText(GraphActivity.this, "" + dataPoint, Toast.LENGTH_LONG).show();
+            }
+        });
+
+// draw values on top
+        Log.v("Datapoint", ar[0].getX() + "");
+        Double start = Double.parseDouble(ar[0].getX()+"");
+        Double end = Double.parseDouble(ar[items.size()-1].getX()+"");
+        Log.v("Start", start + "");
+        Log.v("End",end+"");
+        graph.setTitleTextSize(5);
+        graph.getGridLabelRenderer().setTextSize(18f);
+        graph.getGridLabelRenderer().reloadStyles();
+        graph.getViewport().setXAxisBoundsManual(true);
+        graph.getViewport().setMinX(start - 1);
+        graph.getViewport().setMaxX(end + 1);
+        graph.getViewport().setScrollable(true);
+        graph.getViewport().setScalable(true);
 
     }
 
