@@ -3,7 +3,6 @@ package akssmk.com.agriculturalapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import akssmk.com.agriculturalapp.R;
+import akssmk.com.agriculturalapp.activities.WebActivity;
 
 public class PolicyAdapter extends RecyclerView.Adapter<PolicyAdapter.viewHolder> {
     private String[] links;
@@ -38,18 +38,17 @@ public class PolicyAdapter extends RecyclerView.Adapter<PolicyAdapter.viewHolder
 
     @Override
     public void onBindViewHolder(viewHolder holder, final int position) {
-       // if(!list.get(position).title.isEmpty()&&list.get(position).title.length()!=0){
         holder.textView.setText(list.get(position));
 
 
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browser =new Intent(Intent.ACTION_VIEW,Uri.parse(links[position]));
+                Intent browser =new Intent(context, WebActivity.class);
+                browser.putExtra("link",links[position]);
                 context.startActivity(browser);
             }
         });
-        //}
     }
 
     @Override

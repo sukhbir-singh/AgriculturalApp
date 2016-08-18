@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,8 +27,6 @@ public class Select_Policy extends AppCompatActivity {
 
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
-
-        Toast.makeText(Select_Policy.this,"Select Policy to open in Browser",Toast.LENGTH_SHORT).show();
 
         links=getResources().getStringArray(R.array.policies_link);
 
