@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.ValueDependentColor;
-import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.DataPointInterface;
@@ -21,8 +20,8 @@ import com.jjoe64.graphview.series.Series;
 
 import java.util.ArrayList;
 
-import akssmk.com.agriculturalapp.modals.ItemSurvey;
 import akssmk.com.agriculturalapp.R;
+import akssmk.com.agriculturalapp.modals.ItemSurvey;
 
 public class GraphActivity extends AppCompatActivity {
     GraphView graphView;
@@ -44,7 +43,7 @@ public class GraphActivity extends AppCompatActivity {
         if(in != null){
             Bundle extra=getIntent().getBundleExtra("extra");
             items = (ArrayList<ItemSurvey>) extra.getSerializable("All");
-            Log.v("data123",items.get(0).getYear());
+            //Log.v("data123",items.get(0).getYear());
         }
 
         ArrayList<String> year = new ArrayList<>();

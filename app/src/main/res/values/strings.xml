@@ -9,7 +9,6 @@
         <item name="policy4">जैविक खेती के लिए सब्सिडी/आर्थिक सहायता</item>
 
         <item name="policy5">किसान क्रेडिट कार्ड</item>
-        http:
 
         <item name="policy6">राष्ट्रीय खाद्य सुरक्षा मिशन</item>
 
@@ -49,7 +48,8 @@
     <string name="policy_title">Government Schemes</string>
 
     <string name="about">About Application</string>
-    <string name="about_text">This app is made for the event Hackathon conducted by Digital India and sponsered by HackerEarth</string>
+    <string name="about_text">This app is made for the event Hackathon conducted by Digital India and sponsered by HackerEarth.\n\nThis
+        is a open source project Source can be found at <a href="https://github.com/sukhbir-singh/AgriculturalApp">link</a></string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -816,6 +816,6 @@
     <string name="problem_title">Problems and Solution</string>
     <string name="treatment_detail_title">Treatment</string>
     <string name="title_activity_state_department">State Agriculture Department</string>
-
+    <string name="title_activity_soil_health">Soil Health Card</string>
 
 </resources>

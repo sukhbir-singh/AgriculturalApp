@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "akssmk.com.agriculturalapp"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -28,5 +28,7 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.jjoe64:graphview:4.1.1'
+    compile files('../libs/sqliteassethelper-2.0.1.jar')
+
     testCompile 'junit:junit:4.12'
 }

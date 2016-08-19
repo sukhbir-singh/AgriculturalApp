@@ -4,15 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 
+import akssmk.com.agriculturalapp.R;
 import akssmk.com.agriculturalapp.adapters.CropActivityAdapter;
 import akssmk.com.agriculturalapp.modals.CropDetailItem;
-import akssmk.com.agriculturalapp.R;
 
 public class CropDetailActivity extends AppCompatActivity {
 
@@ -43,7 +42,7 @@ public class CropDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_recycler);
 
-       Integer[] temp1=null;
+        Integer[] temp1=null;
         Integer[] temp2=null;
 
         int num=(int)getIntent().getIntExtra("number",1);
