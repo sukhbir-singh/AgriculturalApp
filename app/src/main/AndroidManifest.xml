@@ -37,6 +37,22 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
+            android:name=".activities.SelectProblem"
+            android:label="@string/problem_title"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.TreatmentDetail"
+            android:label="@string/treatment_detail_title"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SelectProblem" />
+        </activity>
+        <activity
             android:name=".activities.CropProductionActivity"
             android:label="@string/crops_production_title"
             android:theme="@style/AppTheme">
@@ -116,14 +132,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.Select_Policy" />
         </activity>
-
-        <activity android:name=".activities.HorticultureDetailActivity"
+        <activity
+            android:name=".activities.HorticultureDetailActivity"
             android:label="@string/title_activity_horticulture"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.HorticultureActivity"/>
+                android:value=".activities.HorticultureActivity" />
         </activity>
+
     </application>
 
 </manifest>
