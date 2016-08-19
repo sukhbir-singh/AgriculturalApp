@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,8 +21,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:id="@+id/spinner1"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
             android:layout_height="70dp"
@@ -31,8 +31,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:id="@+id/spinner2"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
@@ -47,26 +46,14 @@
             android:layout_height="2dp"
             android:layout_marginTop="10dp"
             android:background="#69999999"/>
-        
-        <TextView
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
-            android:textSize="18sp"
-            android:id="@+id/lab_id"
-            android:text="LAB_ID: 12131"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-        <TextView
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:textSize="18sp"
-            android:text="LAB NAME: SOIL HEALTH DEPARTMENT JAIPUR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:background="#fffefe"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler"/>
+
     </LinearLayout>
     
-</ScrollView>
+</LinearLayout>
