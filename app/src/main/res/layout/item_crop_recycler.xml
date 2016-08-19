@@ -6,7 +6,7 @@
     card_view:cardUseCompatPadding="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ca684d"
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/tools">
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#eee">
+        android:id="@+id/card">
        <LinearLayout
            android:padding="5dp"
            android:layout_width="match_parent"

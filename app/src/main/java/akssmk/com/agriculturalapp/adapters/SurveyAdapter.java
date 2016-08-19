@@ -1,10 +1,12 @@
 package akssmk.com.agriculturalapp.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -35,6 +37,12 @@ public class SurveyAdapter  extends RecyclerView.Adapter<SurveyAdapter.viewHolde
         holder.year_view.setText(items.get(position).getYear());
         holder.area_view.setText(items.get(position).getArea());
         holder.production_view.setText(items.get(position).getProduction());
+
+        if(position%2==0){
+            holder.cardView.setBackgroundColor(Color.parseColor("#80cbc4"));
+        }else{
+            holder.cardView.setBackgroundColor(Color.parseColor("#ef9a9a"));
+        }
     }
 
     @Override
@@ -44,12 +52,14 @@ public class SurveyAdapter  extends RecyclerView.Adapter<SurveyAdapter.viewHolde
 
     public static class viewHolder extends RecyclerView.ViewHolder{
         private TextView year_view,area_view,production_view;
+        private LinearLayout cardView;
 
         public viewHolder(View itemView) {
             super(itemView);
             year_view=(TextView)itemView.findViewById(R.id.year);
             area_view=(TextView)itemView.findViewById(R.id.area);
             production_view=(TextView)itemView.findViewById(R.id.production);
+            cardView=(LinearLayout)itemView.findViewById(R.id.card);
         }
     }
 }

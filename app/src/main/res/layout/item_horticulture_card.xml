@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
-    card_view:cardCornerRadius="2dp"
-    card_view:cardElevation="8dp"
-    android:layout_margin="4dp"
-    android:id="@+id/card"
-    card_view:cardUseCompatPadding="true"
-    android:layout_width="match_parent"
-    android:background="#9ed1fa"
-    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/tools">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="#9ed1fa"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="4dp"
+    card_view:cardCornerRadius="3dp">
     <ImageView
         android:id="@+id/imageView"
         android:scaleType="centerCrop"

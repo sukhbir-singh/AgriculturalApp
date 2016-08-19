@@ -87,7 +87,7 @@
         </activity>
         <activity
             android:name=".activities.SurveyInformation"
-            android:label="@string/bazaar_title"
+            android:label="@string/production_details_title"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

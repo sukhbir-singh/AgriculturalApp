@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity
 
         }else if(id == R.id.call_link){
             if(Build.VERSION.SDK_INT<23){
-                Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91" + "9816469656"));
+                Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91" + "18001801551"));
 
                 try{
                     startActivity(in);

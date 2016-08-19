@@ -66,7 +66,7 @@
     <string name="storage_card_title_en">Soil Health Card </string>
     <string name="storage_card_title_hi">मृदा स्वास्थ्य कार्डं</string>
 
-    <string name="survey_card_title_en"> Production Detais</string>
+    <string name="survey_card_title_en"> Production Details</string>
     <string name="survey_card_title_hi">उत्पादन का विवरण </string>
 
     <string name="horticulture_card_title_en">Horticulture Methods</string>
@@ -85,7 +85,7 @@
     <string name="horticulture_item3_en">Guava</string>
 
 
-    <string name="wheat_h1">1.परिचय (Introduction)</string>
+    <string name="wheat_h1">1.परिचय</string>
     <string name="wheat_h2">2.उपयुक्त जलवायु क्षेत्र</string>
     <string name="wheat_h3">3.भूमि का चयन</string>
     <string name="wheat_h4">4.खेत  की तैयारी</string>
