@@ -427,7 +427,7 @@
         <item name="mh9">9. रोग और नियंत्रण</item>
         <item name="mh10">10. कीट और उनका नियंत्रण</item>
         <item name="mh11">11. फलों को तोड़ने का समय</item>
-       <item name="mh12">12.  उपज</item>
+        <item name="mh12">12.  उपज</item>
     </string-array>
 
     <string name="md1">आम की खेती लगभग पूरे देश में की जाती हैI यह मनुष्य का बहुत ही प्रीय फल मन जाता है इसमे खटास लिए
@@ -669,14 +669,7 @@
 
     <string name="ad11">अरहर की जल्दी पकने वाली प्रजातियाँ की उपज १८षे२० कुंतल ले सकते है इसी तरीके
         से जो देर से पकने वाली प्रजातियाँ है उस फसल से २५ से ३० कुंतल उपज प्राप्त कर सकते है I</string>
-
-
-
-
-
-
-
-
+    <string name="title_activity_soil_health">Soil Health Card</string>
 
 
 </resources>

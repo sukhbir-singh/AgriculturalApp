@@ -46,7 +46,7 @@
     </string-array>
 
     <string-array name="State_market">
-        <item>Select Market</item>
+        <item>Select State</item>
        <item>Andaman and Nicobar </item>
         <item> Andhra Pradesh      </item>
         <item> Assam               </item>

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         Intent[] links={
                 new Intent(MainActivity.this, CropProductionActivity.class),
                 new Intent(MainActivity.this, Select_Policy.class),
-                new Intent(MainActivity.this, Select_Policy.class),
+                new Intent(MainActivity.this, SoilHealthActivity.class),
                 new Intent(MainActivity.this, SurveyActivity.class),
                 new Intent(MainActivity.this, HorticultureActivity.class),
                 new Intent(MainActivity.this, Select_Policy.class)

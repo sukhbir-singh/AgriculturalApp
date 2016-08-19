@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -116,13 +117,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.Select_Policy" />
         </activity>
-
-        <activity android:name=".activities.HorticultureDetailActivity"
+        <activity
+            android:name=".activities.HorticultureDetailActivity"
             android:label="@string/title_activity_horticulture"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.HorticultureActivity"/>
+                android:value=".activities.HorticultureActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SoilHealthActivity"
+            android:label="@string/title_activity_soil_health"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
         </activity>
     </application>
 

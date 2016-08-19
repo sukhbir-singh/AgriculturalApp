@@ -45,8 +45,6 @@ public class SurveyActivity extends AppCompatActivity{
     ArrayList<String> list11,list2;
     ProgressBar p;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
