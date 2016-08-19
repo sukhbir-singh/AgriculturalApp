@@ -140,6 +140,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.HorticultureActivity" />
         </activity>
+        <activity
+            android:name=".activities.StateDepartment"
+            android:label="@string/title_activity_state_department"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
 
     </application>
 

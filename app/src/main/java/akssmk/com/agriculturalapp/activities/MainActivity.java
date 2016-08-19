@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, Select_State_Bazaar.class));
 
         }else if(id == R.id.state_agricultural_nav){
-            //startActivity(new Intent(MainActivity.this,BazaarActivity2.class));
+            startActivity(new Intent(MainActivity.this,StateDepartment.class));
 
         }else if(id == R.id.about_nav){
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity
 
         }else if(id == R.id.contactus_nav){
             Intent intent = new Intent(Intent.ACTION_SENDTO);
-            String uriText = "mailto:" + Uri.encode("sukhbir947@gmail.com") + "?subject=" +
+            String uriText = "mailto:" + Uri.encode("akhileshnithcse@gmail.com") + "?subject=" +
                     Uri.encode("Feedback") + "&body=" + Uri.encode("");
 
             Uri uri = Uri.parse(uriText);
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity
 
                 }
 
-                Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91" + "9816469656"));
+                Intent in=new Intent(Intent.ACTION_CALL, Uri.parse("tel:+91" + "18001801551"));
 
                 try{
                     startActivity(in);

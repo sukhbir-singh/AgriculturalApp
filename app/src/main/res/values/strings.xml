@@ -815,6 +815,7 @@
     </string>
     <string name="problem_title">Problems and Solution</string>
     <string name="treatment_detail_title">Treatment</string>
+    <string name="title_activity_state_department">State Agriculture Department</string>
 
 
 </resources>
