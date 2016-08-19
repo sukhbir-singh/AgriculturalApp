@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -44,6 +45,8 @@ public class SoilHealthActivity extends AppCompatActivity {
         helper=new SqliteHelper(this);
 
         list1=helper.getDistinctStates();
+
+        Toast.makeText(SoilHealthActivity.this,"Find Nearest Soil Test Laboratory",Toast.LENGTH_LONG).show();
 
         arrayAdapter1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,list1);
         arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

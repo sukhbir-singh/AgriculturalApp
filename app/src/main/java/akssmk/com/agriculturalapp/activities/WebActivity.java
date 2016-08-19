@@ -16,10 +16,16 @@ public class WebActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web);
 
         String link=getIntent().getStringExtra("link");
+        String title_temp=getIntent().getStringExtra("title");
+
+        if(title_temp!=null){
+            getSupportActionBar().setTitle(title_temp);
+        }
 
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setBuiltInZoomControls(true);
 
         Toast.makeText(WebActivity.this, "Please Wait...", Toast.LENGTH_SHORT).show();
 

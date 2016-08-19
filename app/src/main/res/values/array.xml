@@ -37,6 +37,45 @@
         <item>UTTARANCHAL</item>
         <item>WEST BENGAL</item>
     </string-array>
+
+    <string-array name="state_links">
+
+        <item>	http://agri.and.nic.in </item>
+        <item>http://www.apagrisnet.gov.in</item>
+        <item>	http://arunachalpradesh.nic.in</item>
+        <item>http://www.agriassam.in</item>
+        <item>http://krishi.bih.nic.in</item>
+        <item>	http://agripb.gov.in</item>
+        <item>http://agridept.cg.gov.in</item>
+        <item>	http://www.dnh.nic.in/Departments/Agriculture.aspx</item>
+        <item>http://agricoop.nic.in/</item>
+        <item>http://agri.goa.gov.in</item>
+        <item>https://agri.gujarat.gov.in/</item>
+        <item>	http://agriharyana.nic.in/</item>
+        <item>http://www.hpagriculture.com/</item>
+        <item>	http://www.jkapd.nic.in/</item>
+        <item>	http://www.jharkhand.gov.in/agri</item>
+        <item>	http://raitamitra.kar.nic.in/KAN/index.asp</item>
+        <item>	http://www.keralaagriculture.gov.in/</item>
+        <item>	http://mpkrishi.mp.gov.in/</item>
+        <item>	http://www.mahaagri.gov.in/</item>
+        <item>	http://mastec.nic.in/About_agriculture.htm</item>
+        <item>http://www.megagriculture.gov.in/</item>
+        <item>http://agriculturemizoram.nic.in/</item>
+        <item>http://agringl.nic.in/</item>
+        <item>	http://agriodisha.nic.in/</item>
+        <item>http://agri.puducherry.gov.in/</item>
+        <item>	http://agripb.gov.in/</item>
+        <item>http://agriculture.rajasthan.gov.in/</item>
+        <item>	http://www.sikkimagrisnet.org</item>
+        <item>http://www.tn.gov.in/department/2</item>
+        <item>	http://agri.tripura.gov.in/</item>
+        <item>	http://agriculture.up.nic.in/</item>
+        <item>	http://agriculture.uk.gov.in/</item>
+        <item>	http://www.wbagrisnet.gov.in/</item>
+
+    </string-array>
+
     <string-array name="District">
         <item>Select District</item>
     </string-array>
@@ -84,4 +123,7 @@
         <item>Yesterday</item>
         <item>Day before Yesterday</item>
     </string-array>
+
+
+
 </resources>
