@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -34,6 +35,7 @@ import akssmk.com.agriculturalapp.R;
 import akssmk.com.agriculturalapp.adapters.BazaarAdapter;
 import akssmk.com.agriculturalapp.application.MyApplication;
 import akssmk.com.agriculturalapp.application.MySingleton;
+import akssmk.com.agriculturalapp.utilities.Connection;
 
 /**
  * Created by sukhbir on 14/8/16.
@@ -140,7 +142,11 @@ public class BazaarInformation extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                if(!new Connection(BazaarInformation.this).isInternet()){
+                    Toast.makeText(BazaarInformation.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(BazaarInformation.this, "Some error occured", Toast.LENGTH_SHORT).show();
+                }
             }
         }){
             @Override

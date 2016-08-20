@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -31,6 +32,7 @@ import java.util.Map;
 import akssmk.com.agriculturalapp.R;
 import akssmk.com.agriculturalapp.application.MyApplication;
 import akssmk.com.agriculturalapp.application.MySingleton;
+import akssmk.com.agriculturalapp.utilities.Connection;
 
 public class SurveyActivity extends AppCompatActivity{
 
@@ -61,7 +63,7 @@ public class SurveyActivity extends AppCompatActivity{
         list2.add("Select Crop");
         p.setVisibility(View.VISIBLE);
 
-         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.States));
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,getResources().getStringArray(R.array.States));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter);
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -150,6 +152,7 @@ public class SurveyActivity extends AppCompatActivity{
     }
 
     private void sendRequest(final String url, final String key, final String value){
+
         p.setVisibility(View.VISIBLE);
 
       StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -176,6 +179,11 @@ public class SurveyActivity extends AppCompatActivity{
           @Override
           public void onErrorResponse(VolleyError error) {
               p.setVisibility(View.GONE);
+              if(!new Connection(SurveyActivity.this).isInternet()){
+                  Toast.makeText(SurveyActivity.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+              }else{
+                  Toast.makeText(SurveyActivity.this, "Some error occured", Toast.LENGTH_SHORT).show();
+              }
           }
       }){
           @Override

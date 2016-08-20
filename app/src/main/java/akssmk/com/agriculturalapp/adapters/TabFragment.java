@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -30,6 +31,7 @@ import akssmk.com.agriculturalapp.R;
 import akssmk.com.agriculturalapp.application.MyApplication;
 import akssmk.com.agriculturalapp.application.MySingleton;
 import akssmk.com.agriculturalapp.modals.ItemBazaar;
+import akssmk.com.agriculturalapp.utilities.Connection;
 
 public class TabFragment extends Fragment {
 
@@ -60,35 +62,23 @@ public class TabFragment extends Fragment {
         district_view=(TextView)view.findViewById(R.id.district);
         day_view=(TextView)view.findViewById(R.id.arrival_date);
         p = (ProgressBar)view.findViewById(R.id.progress);
-        p.setVisibility(View.VISIBLE);
 
         recyclerView=(RecyclerView)view.findViewById(R.id.crop_recycler);
 
-        //if(i!=null){
-            /*state=i.getStringExtra(SurveyActivity.STATE);
-            district=i.getStringExtra(SurveyActivity.DISTRICT);
-            day=i.getStringExtra(SurveyActivity.CROP);*/
+        day=day_string;
+        day_view.setText(date_string);
+        state_view.setText(state);
+        district_view.setText(district);
 
-           // state="Rajasthan";
-            //district="Kota";
-            day=day_string;
-
-            day_view.setText(date_string);  //
-
-            state_view.setText(state);
-            district_view.setText(district);
-
-            sendRequest(URL_FINAL,state,district,date_string);
-       // }
-
-
-
+        sendRequest(URL_FINAL,state,district,date_string);
 
         return view;
     }
 
     private void sendRequest(String url, final String State, final String District, final String Day)
     {
+        p.setVisibility(View.VISIBLE);
+
         StringRequest s = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -137,11 +127,18 @@ public class TabFragment extends Fragment {
                     e.printStackTrace();
                 }
 
+                p.setVisibility(View.GONE);
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                p.setVisibility(View.GONE);
+                if(!new Connection(getContext()).isInternet()){
+                    Toast.makeText(getContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getContext(), "Some error occured", Toast.LENGTH_SHORT).show();
+                }
             }
         }){
             @Override

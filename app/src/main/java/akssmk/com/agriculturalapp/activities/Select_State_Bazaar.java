@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -31,6 +32,7 @@ import java.util.Map;
 import akssmk.com.agriculturalapp.R;
 import akssmk.com.agriculturalapp.application.MyApplication;
 import akssmk.com.agriculturalapp.application.MySingleton;
+import akssmk.com.agriculturalapp.utilities.Connection;
 
 public class Select_State_Bazaar extends AppCompatActivity {
 
@@ -101,7 +103,7 @@ public class Select_State_Bazaar extends AppCompatActivity {
                 String State = arrayAdapter.getItem(spinner1.getSelectedItemPosition());
                 String District = arrayAdapter1.getItem(spinner2.getSelectedItemPosition());
 
-                if (!State.isEmpty() && !District.isEmpty() && (!State.equals("Select State"))) {
+                if (spinner1.getSelectedItemPosition() != 0&& !District.equals("Select District")) {
 
                     Intent intent = new Intent(Select_State_Bazaar.this, BazaarActivity2.class);
                     intent.putExtra(STATE, State);
@@ -117,7 +119,7 @@ public class Select_State_Bazaar extends AppCompatActivity {
     }
 
     private void sendRequest(final String url, final String key, final String value){
-        Log.v("K",value+"");
+        Log.v("K", value + "");
         p.setVisibility(View.VISIBLE);
 
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -146,6 +148,11 @@ public class Select_State_Bazaar extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 p.setVisibility(View.GONE);
+                if(!new Connection(Select_State_Bazaar.this).isInternet()){
+                    Toast.makeText(Select_State_Bazaar.this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(Select_State_Bazaar.this, "Some error occured", Toast.LENGTH_SHORT).show();
+                }
             }
         }){
             @Override
