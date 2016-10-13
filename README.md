@@ -5,7 +5,13 @@ Sample apk can be downloaded from following  [link](https://github.com/sukhbir-s
 
 Screencast can be found at following [youtube link](https://youtu.be/-mDYZHtcagk).
 
-**Contributers:**
+
+**Contest Link:**
+
+https://www.hackerearth.com/sprints/digital-india-hackathon/?utm_source=website&utm_medium=widget&utm_campaign=live-widget
+
+
+**Team Members:**
 
 1.[Akhilesh Kumar](https://github.com/akhilesh26)
 
@@ -13,7 +19,8 @@ Screencast can be found at following [youtube link](https://youtu.be/-mDYZHtcagk
 
 3.[Mukesh Kharita](https://github.com/mukeshkharita)
 
-Special thanks to [Sahil Ramola](https://github.com/RamolaWeb)
+4.[Sahil Ramola](https://github.com/RamolaWeb)
+
 
 **Resources Used:**
 
@@ -33,9 +40,10 @@ Special thanks to [Sahil Ramola](https://github.com/RamolaWeb)
 
 8.[http://agmarknet.dac.gov.in/](http://agmarknet.dac.gov.in/)
 
+
 **Open Source Libraries used**
 
-1.[Volly](https://github.com/mcxiaoke/android-volley)
+1.[Volley](https://github.com/mcxiaoke/android-volley)
 
 2.[GraphView](https://github.com/jjoe64/GraphView)
 
